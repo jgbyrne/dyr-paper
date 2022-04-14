@@ -1,11 +1,11 @@
 # Fdb version 3
-["bibtex dyr"] 1649943822 "dyr.aux" "dyr.bbl" "dyr" 1649943822
-  "dyr.aux" 1649943822 1416 db25d2eb7769cdcd9c574f535b6b0a4b "pdflatex"
+["bibtex dyr"] 1649951828 "dyr.aux" "dyr.bbl" "dyr" 1649951829
+  "dyr.aux" 1649951828 1433 b8931574e5a09cd213d92242c8852d45 "pdflatex"
   "dyr.bib" 0 -1 0 ""
   (generated)
   "dyr.bbl"
   "dyr.blg"
-["pdflatex"] 1649943822 "dyr.tex" "dyr.pdf" "dyr" 1649943822
+["pdflatex"] 1649951828 "dyr.tex" "dyr.pdf" "dyr" 1649951829
   "/home/jgb/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1648664632 1345251 acb4b6f8ac85315465aa350f046e66e6 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1642002329 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm" 1136768653 1292 bd42be2f344128bff6d35d98474adfe3 ""
@@ -16,6 +16,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm" 1136768653 4712 9ef4d7d106579d4b136e1529e1a4533c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm" 1136768653 7040 b2bd27e2bfe6f6948cbc3239cae7444f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb7t.tfm" 1136768653 1616 371d1ee60c04b008c8fd760060cd34f1 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm" 1136768653 2532 9ad73cf4dd2173a847f2a5f5608e0b9a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm" 1136768653 3456 16dd534f88eb2bd21ebc7203786b436e ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplbi7t.tfm" 1136768653 1816 bb70e8d3600ea56abb211fdcc6909bf3 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplbi8t.tfm" 1136768653 3788 23f75d701871fed6ba2bf32f67976132 ""
@@ -49,10 +50,13 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb" 1136849748 45758 19968a0990191524e34e1994d4a31cb6 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb" 1136849748 35941 f27169cc74234d5bd5e4cca5abafaabb ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb" 1136849748 44648 23115b2a545ebfe2c526c3ca99db8b95 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb" 1136849748 52406 dad2f72863a03727d5f536c64a69c452 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb" 1136849748 52665 661b1e6b26edb5f50dd491f8a701cb57 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb" 1136849748 50022 90249cba7e3e4e9845f80328d6f9bd13 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb" 1136849748 45955 6dfcb282cf470ceb18d57d017b7898d6 ""
@@ -60,6 +64,7 @@
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvb8t.vf" 1136768653 2340 0efed6a948c3c37d870e4e7ddb85c7c3 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvbc8t.vf" 1136768653 3612 e9d0fc85037b9bacac690560a2ad3462 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvr8t.vf" 1136768653 2344 44ff28c9ef2fc97180cd884f900fee71 ""
+  "/usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf" 1136768653 2316 c3899bd8afb459a9a5a9a546bf3029a2 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf" 1136768653 2324 a163806de13ddf37313d2ee968aa0a98 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplrc8t.vf" 1136768653 3612 3b695ba1de8aa9e6cce1125ba31cb82d ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplri8t.vf" 1136768653 2308 5bc0a90b83a3fd7d37d34ef3b64d7e8a ""
@@ -97,9 +102,9 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1642002331 40136 b05acc85e8425979e52682d98a2bcacf ""
   "/usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1648210142 349695 aec0841556034f7e9828e3f673e008d3 ""
   "IEEEtran.cls" 1649778381 281957 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
-  "dyr.aux" 1649943822 1416 db25d2eb7769cdcd9c574f535b6b0a4b "pdflatex"
+  "dyr.aux" 1649951828 1433 b8931574e5a09cd213d92242c8852d45 "pdflatex"
   "dyr.bbl" 0 -1 0 "bibtex dyr"
-  "dyr.tex" 1649943821 15519 a3f62ff8044ca44d8cd09f8793bbfe3c ""
+  "dyr.tex" 1649951828 19587 609b94c635915544cc31d0d0c6a08964 ""
   (generated)
   "dyr.aux"
   "dyr.log"
