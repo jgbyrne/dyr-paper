@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: dyr.aux
+The style file: ieeetran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: dyr.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+
+Done.
+You've used 13 entries,
+            4087 wiz_defined-function locations,
+            910 strings with 10170 characters,
+and the built_in function-call counts, 11785 in all, are:
+= -- 958
+> -- 339
+< -- 113
++ -- 186
+- -- 62
+* -- 581
+:= -- 1709
+add.period$ -- 26
+call.type$ -- 13
+change.case$ -- 11
+chr.to.int$ -- 246
+cite$ -- 13
+duplicate$ -- 810
+empty$ -- 841
+format.name$ -- 72
+if$ -- 2744
+int.to.chr$ -- 0
+int.to.str$ -- 13
+missing$ -- 145
+newline$ -- 62
+num.names$ -- 13
+pop$ -- 312
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 912
+stack$ -- 0
+substring$ -- 601
+swap$ -- 727
+text.length$ -- 31
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 13
+warning$ -- 0
+while$ -- 54
+width$ -- 15
+write$ -- 155
