@@ -175,11 +175,23 @@ The second part of equation \eqref{eqn:posterior} is the prior likelihood of the
 
 The first prior term in \eqref{eqn:posterior} is $f(\psi\;|\;\omega)$, which expresses the prior likelihood of the tree $\psi$ conditioned on the set of parameters $\omega$. In turn, the parameters $\omega$ have their own prior distribution $f(\omega)$. Together, these terms fully implement the prior likelihood model for dated trees, informally known as the `tree prior'. The choice of tree prior is among the most impactful and contentious choices that a researcher needs to make when performing phylogenetic inference.
 
+\subsubsection{Tree Constraints}
+
+To be precise, the prior distribution over $\psi$ is actually composed of a general-purpose phylogenetic model and a set of dataset-specific constraints. We implement three such classes of constraints: tip calibrations, clade constraints, and ancestry constraints.
+
+Tip calibrations constrain the ages of tips that are positioned at some depth in the past. They are implemented as windows of uniform prior density, with all times outside the window having zero prior likelihood. These calibrations are used to encode our convictions about the time periods in which ancient languages were used into the prior model, while giving the inference process freedom to infer the time-depth of these nodes if such a signal exists. As an example, in our Indo-European inferences, the well understood language of Old English has a relatively tight calibration window of (950, 1050) years before the present, while Tocharian B -- about which we know comparatively little -- has a wider window of (1200, 1500) years.
+
+The second constraint class is clade constraints, which are improper priors that simply impose a very large likelihood penalty on topologies that do not contain a given clade. A clade, also known as a monophylectic group, is a set of taxa (i.e. languages) that are all more closely related to each other than they are to any other taxon. Intuitively, a clade is a group that can be pruned from the tree by snipping in exactly one place. Implementing such a constraint into a prior model is sensible when a clade has been established by scholars beyond any doubt.
+
+The third constraint class is ancestory constraints, which are an extension of clade constraints that in addition to requiring that a specified set of taxa form a clade also nominate an additional taxon that is required to be their direct ancestor. Since taxa are exclusively assigned to tips it is not possible for a given taxon to be associated with an internal node of a phylogeny. However, it is possible to simulate ancestry by requiring the ancestral taxon to be joined to the internal node directly above its descendants' clade by a branch of negligable length. We achieve this by using extremely costly improper priors on the lengths of these branches.
+
+We will return to the topic of constraints when we evaluate the suitability of different priors for phylolinguistic inference. For the time being, however, we set them aside. Just remember that whenever we say `tree prior', what we really mean is `prior model \textit{with constraints}'.
+
+\subsubsection{Coalescent Priors}
+
 In our research we focus mainly on a tree prior described by Drummond et al. in a 2005 paper. This paper provides a Bayesian methodology for sampling a tree model called the `generalized skyline plot'. For brevity we refer to this methodology as the `Bayesian skyline'. The theoretical basis for the generalised skyline plot is a stochastic process known as `coalescent theory', and for this reason the Drummond et al. tree prior, and related models, are sometimes known as `coalescent priors'.
 
-\subsubsection{Coalescent Theory}
-
-We now present an overview of coalescent theory and its implementation in the Bayesian skyline.
+We now present an overview of coalescent theory and its implementation as a tree prior in the form of the Bayesian skyline.
 
 It is natural to consider evolutionary trees as being created by a `branching process'. However, the insight of coalescent theory is to consider a stochastic process in the opposite direction, starting with an initial set of lineages and moving backwards until they have all merged into a single lineage -- a `coalescent process'.
 
@@ -188,7 +200,7 @@ We will first consider how the coalescent process applies to just two lineages. 
 When we have more than two lineages, each pair of lineages has a chance of coalescing according to this same distribution. Therefore, given $k$ lineages, the overall rate of coalescent events increases by a factor of $^{k}C_2$. Therefore the probability distribution for the time depth of the next coalescent event is the following:
 
 \begin{equation}\label{eqn:coalescent}
-Pr(t) \sim Exp\left(\frac{\binom{k}{2}}{\theta}\right) = \frac{k(k-1)}{2\theta} \cdot e^{-\frac{k(k-1)}{2\theta} t}
+Pr(t) = Exp\left(\frac{\binom{k}{2}}{\theta}\right) = \frac{k(k-1)}{2\theta} \cdot e^{-\frac{k(k-1)}{2\theta} t}
 \end{equation}
 
 Assume we have a dated phylogenetic tree $\psi$ with all $n$ tips positioned at time $t=0$. Then, moving backwards through time, we can divide its chronology into $n - 1$ intervals, with the first interval starting at $t=0$, and each interval ending at a coalescent event (of which there are necessarily $n-1$). Then every interval has some width $w_i$, which can be considered to be the time spent awaiting the coalescent event for that interval. Each interval also has a certain number of lineages, $k_i$ (which is clearly $n$ for the first interval, $n - 1$ for the second, and so on down to $2$ lineages for the final interval). We also associate some population parameter $\theta_i$ with each interval, which we collectively refer to as $\Theta$. Then it is reasonably intuitive to see that, following on from \eqref{eqn:coalescent}, the likelihood of $\psi$ is the following:
@@ -199,6 +211,23 @@ Pr(\psi\;|\;\Theta) = \prod_{i = 1}^{n - 1}\; \frac{k_i(k_i-1)}{2\theta_i} \cdot
 
 This is the `classic skyline plot'. There are only two added complexities that modify this model into the `generalised skyline plot' that is implemented in \textit{Dyr}. The first is that instead of selecting $n - 1$ values of $\theta$, we select $s$ values, where $s$ is a consideraly smaller number; typically $5$.\footnote{This value is pre-selected and not inferred by MCMC. The reader may fairly ask why; the reason is that changing $s$ changes the size of the parameter space. Stepping through variably-sized parameter spaces requires a considerably more complicated variant of MCMC called `reversible-jump'. This technique is not used by most phylolinguistic research and is consequently out-of-scope for our project.} We then group the $n - 1$ coalescent intervals into $s$ contiguous `generalised intervals' to which the $\theta$ values correspondingly apply. This is to prevent the population values being too heavily influenced by stochastical noise. The other necessary modfication is to allow for the number of lineages to change within a coalescent interval. I spare the reader the fiddly notation for these amendments since the underlying maths remains essentially the same.
 
+The parameters of the generalised skyline plot that are inferred by the MCMC process are the sizes of the generalised intervals, $\Xi$, and the `population' parameters $\Theta$. Thus, for inferences using this tree prior, $\omega = (\Xi, \Theta)$. The parameters $\Xi$ have a uniform prior (with the proviso that all generalised intervals must contain at least one coalescent interval). However, $\Theta$ has the following scale-invariant prior, which applies population smoothing between adjacent generalised intervals.\footnote{This equation is slightly different to that given by Drummond et al. -- I believe theirs to be erroneous.}
+
+\begin{equation}\label{eqn:thetaprior}
+f(\Theta) = \frac{1}{\theta_1} \prod_{j=2}^s \theta_{j-1} \cdot e^{-\frac{\theta_j}{\theta_{j-1}}}
+\end{equation}
+
+For inferences using the generalised skyline plot, equation \eqref{eqn:thetaprior} effectively corresponds to $f(\omega)$ in \eqref{eqn:posterior}.
+
+\subsubsection{Tree Prior Suitability}
+
+We have chosen to implement the generalised skyline plot because it is the standard choice of tree prior for phylolinguistic inference. This is in spite of the fact that the theory underlying it does not have a convincing linguistic interpretation. Coalescent theory is predicated on a large population of individuals, inter-breeding at random, of which only a relatively tiny fraction are sampled. This makes sense in a bioinformatics context; most likely your dataset does not include an appreciable fraction of all the organisms in a species! However, in a linguistics context, this assumption does not hold up -- our broad dataset for Indo-European contains 94 languages, a non-trivial proportion of all Indo-European languages ever to exist (even with a liberal approach to the language-or-dialect question). It is also hard to reconcile our basic intuitions about language evolution with the stipulations of coalescent theory; in particular, that a population be haploid (languages don't always cleanly displace each other) and mate randomly (suggesting a reason why Tajik has had little influence on Icelandic is left as an exercise to the reader).
+
+Rama is to my knowledge the only researcher to admit that the coalescent prior is hard to interpret in a linguistic context. He half-heartedly suggests that the observed languages are a sample of a larger haploid population of languages. This cannot, however, be reconciled with our knowledge that our Indo-European dataset comprises a reasonably large fraction of all the Indo-European languages spoken today (and, most likely, all those ever spoken). Rama also does not offer a suggestion to solve the random-breeding problem.
+
+In my view, it is best to simply treat the troublesome `population' parameter as simply being an inferred `inverse rate of coalescence' and leave it at that. In this context, it is probably more sensible to use a constant-population coalescent prior (as Rama does) rather than the generalised skyline plot that is more generally preferred. Coalescent priors do nonetheless have some sensible properties, in particular that the rate of coalescence is proportional to the number of lineages. This means we can treat coalescence as a local phenomena, which is obviously desirable. The likelihood of a particular language diverging is very clearly not influenced by another language two continents away splitting in twain. This might sound too obvious to need stating, but it is a property not shared with the uniform prior, which Rama suggests as a viable alternative to the coalescent prior. This prior model assumes that coalescent events are evenly distributed between the root and the present day, which sounds sensible until one realises the implication that the likelihood of any given lineage diverging is reduced when the overall number of lineages increases.
+
+An alternative to the dubiously justified coalescent prior and the demonstrably inappropriate uniform prior is the fossilised birth death prior. write some more here?
 
 \subsection{Markov Chain Monte Carlo}
 
