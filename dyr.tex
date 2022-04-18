@@ -171,7 +171,34 @@ At this point the reader may be questioning the necessity of allowing rates to v
 
 \subsection{Prior Distributions}
 
+The second part of equation \eqref{eqn:posterior} is the prior likelihood of the parameterisation. These terms express our baseline evolutionary model for phylogenies in general and language in particular.
+
+The first prior term in \eqref{eqn:posterior} is $f(\psi\;|\;\omega)$, which expresses the prior likelihood of the tree $\psi$ conditioned on the set of parameters $\omega$. In turn, the parameters $\omega$ have their own prior distribution $f(\omega)$. Together, these terms fully implement the prior likelihood model for dated trees, informally known as the `tree prior'. The choice of tree prior is among the most impactful and contentious choices that a researcher needs to make when performing phylogenetic inference.
+
+In our research we focus mainly on a tree prior described by Drummond et al. in a 2005 paper. This paper provides a Bayesian methodology for sampling a tree model called the `generalized skyline plot'. For brevity we refer to this methodology as the `Bayesian skyline'. The theoretical basis for the generalised skyline plot is a stochastic process known as `coalescent theory', and for this reason the Drummond et al. tree prior, and related models, are sometimes known as `coalescent priors'.
+
 \subsubsection{Coalescent Theory}
+
+We now present an overview of coalescent theory and its implementation in the Bayesian skyline.
+
+It is natural to consider evolutionary trees as being created by a `branching process'. However, the insight of coalescent theory is to consider a stochastic process in the opposite direction, starting with an initial set of lineages and moving backwards until they have all merged into a single lineage -- a `coalescent process'.
+
+We will first consider how the coalescent process applies to just two lineages. They coalesce at a time depth drawn from an exponential distribution with mean $\theta$. In coalescent theory, this parameter is typically known as the `population', because in the biological context within which the theory was devised it is proportional to the size of the breeding population of the community of organisms in question. In the context of phylolinguistics it is perhaps best understood as simply being the inverse of the rate of coalescence.
+
+When we have more than two lineages, each pair of lineages has a chance of coalescing according to this same distribution. Therefore, given $k$ lineages, the overall rate of coalescent events increases by a factor of $^{k}C_2$. Therefore the probability distribution for the time depth of the next coalescent event is the following:
+
+\begin{equation}\label{eqn:coalescent}
+Pr(t) \sim Exp\left(\frac{\binom{k}{2}}{\theta}\right) = \frac{k(k-1)}{2\theta} \cdot e^{-\frac{k(k-1)}{2\theta} t}
+\end{equation}
+
+Assume we have a dated phylogenetic tree $\psi$ with all $n$ tips positioned at time $t=0$. Then, moving backwards through time, we can divide its chronology into $n - 1$ intervals, with the first interval starting at $t=0$, and each interval ending at a coalescent event (of which there are necessarily $n-1$). Then every interval has some width $w_i$, which can be considered to be the time spent awaiting the coalescent event for that interval. Each interval also has a certain number of lineages, $k_i$ (which is clearly $n$ for the first interval, $n - 1$ for the second, and so on down to $2$ lineages for the final interval). We also associate some population parameter $\theta_i$ with each interval, which we collectively refer to as $\Theta$. Then it is reasonably intuitive to see that, following on from \eqref{eqn:coalescent}, the likelihood of $\psi$ is the following:
+
+\begin{equation}\label{eqn:skyline}
+Pr(\psi\;|\;\Theta) = \prod_{i = 1}^{n - 1}\; \frac{k_i(k_i-1)}{2\theta_i} \cdot e^{-\frac{k_i(k_i-1)}{2\theta_i} w_i}
+\end{equation}
+
+This is the `classic skyline plot'. There are only two added complexities that modify this model into the `generalised skyline plot' that is implemented in \textit{Dyr}. The first is that instead of selecting $n - 1$ values of $\theta$, we select $s$ values, where $s$ is a consideraly smaller number; typically $5$.\footnote{This value is pre-selected and not inferred by MCMC. The reader may fairly ask why; the reason is that changing $s$ changes the size of the parameter space. Stepping through variably-sized parameter spaces requires a considerably more complicated variant of MCMC called `reversible-jump'. This technique is not used by most phylolinguistic research and is consequently out-of-scope for our project.} We then group the $n - 1$ coalescent intervals into $s$ contiguous `generalised intervals' to which the $\theta$ values correspondingly apply. This is to prevent the population values being too heavily influenced by stochastical noise. The other necessary modfication is to allow for the number of lineages to change within a coalescent interval. I spare the reader the fiddly notation for these amendments since the underlying maths remains essentially the same.
+
 
 \subsection{Markov Chain Monte Carlo}
 

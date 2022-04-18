@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex dyr"] 1649965490 "dyr.aux" "dyr.bbl" "dyr" 1650192254
+["bibtex dyr"] 1650295431 "dyr.aux" "dyr.bbl" "dyr" 1650295552
   "./IEEEtran.bst" 1649954835 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "dyr.aux" 1650192254 3416 ef92b325b903f7a12883ea0344e20a6b "pdflatex"
+  "dyr.aux" 1650295552 3481 7e942afeff238191dffd1bc3dd523679 "pdflatex"
   "dyr.bib" 1649964840 10324 4e9c9fef19c5bc07c8766acd605ffe60 ""
   (generated)
   "dyr.bbl"
   "dyr.blg"
-["pdflatex"] 1650192254 "dyr.tex" "dyr.pdf" "dyr" 1650192254
+["pdflatex"] 1650295552 "dyr.tex" "dyr.pdf" "dyr" 1650295552
   "/home/jgb/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1648664632 1345251 acb4b6f8ac85315465aa350f046e66e6 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1642002329 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -56,11 +56,15 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb" 1254269338 23055 2e5b42921de910eaa97b85df04ca4891 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb" 1254269338 30388 702fae6a5f0e6e9c48a1d872b442ffcf ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi5.pfb" 1254269338 31443 ba2241b179aa231f73e052863720cb42 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi7.pfb" 1254269338 30789 be3ebdf20b6442cc4aaf81a81e17daf4 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb" 1254269338 30635 833ec815d446ec453a4913fc26d24cbc ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb" 1255129361 119235 f35b44530a1d90eb90fe15d9cba67ea0 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr5.pfb" 1255129361 120387 212cad1e763d510fc9c3ce2466274a57 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr7.pfb" 1255129361 121145 68312a933e2c689ed40ec0aba373e279 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb" 1254269338 27863 09ce3735688ffde955e72da27c95b61a ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy5.pfb" 1254269338 28210 987b40585e9bcf6463d6155bb4219492 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy7.pfb" 1254269338 27941 d1f5d03f61a46c3fcc3a2ba904ddda52 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb" 1136849748 45758 19968a0990191524e34e1994d4a31cb6 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb" 1136849748 35941 f27169cc74234d5bd5e4cca5abafaabb ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb" 1136849748 44648 23115b2a545ebfe2c526c3ca99db8b95 ""
@@ -112,9 +116,9 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1642002331 40136 b05acc85e8425979e52682d98a2bcacf ""
   "/usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1649954662 377441 44770e669a195f417564af1a86582e19 ""
   "IEEEtran.cls" 1649778381 281957 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
-  "dyr.aux" 1650192254 3416 ef92b325b903f7a12883ea0344e20a6b "pdflatex"
-  "dyr.bbl" 1649965490 4080 f9e3378b56456229dbd6977c8f06eff9 "bibtex dyr"
-  "dyr.tex" 1650190209 24379 51d95dc066f8ea9dab9adf6418baedc5 ""
+  "dyr.aux" 1650295552 3481 7e942afeff238191dffd1bc3dd523679 "pdflatex"
+  "dyr.bbl" 1650295431 4080 f9e3378b56456229dbd6977c8f06eff9 "bibtex dyr"
+  "dyr.tex" 1650295551 29325 d711d8457acfed9f41dfce7831ba25d4 ""
   (generated)
   "dyr.aux"
   "dyr.log"
