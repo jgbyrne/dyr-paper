@@ -214,7 +214,7 @@ This is the `classic skyline plot'. There are only two added complexities that m
 The parameters of the generalised skyline plot that are inferred by the MCMC process are the sizes of the generalised intervals, $\Xi$, and the `population' parameters $\Theta$. Thus, for inferences using this tree prior, $\omega = (\Xi, \Theta)$. The parameters $\Xi$ have a uniform prior (with the proviso that all generalised intervals must contain at least one coalescent interval). However, $\Theta$ has the following scale-invariant prior, which applies population smoothing between adjacent generalised intervals.\footnote{This equation is slightly different to that given by Drummond et al. -- I believe theirs to be erroneous.}
 
 \begin{equation}\label{eqn:thetaprior}
-f(\Theta) = \frac{1}{\theta_1} \prod_{j=2}^s \theta_{j-1} \cdot e^{-\frac{\theta_j}{\theta_{j-1}}}
+    f(\Theta) = \frac{1}{\theta_1} \; \prod_{j=2}^s\; \frac{1}{\theta_{j-1}} \cdot e^{-\frac{\theta_j}{\theta_{j-1}}}
 \end{equation}
 
 For inferences using the generalised skyline plot, equation \eqref{eqn:thetaprior} effectively corresponds to $f(\omega)$ in \eqref{eqn:posterior}.
@@ -288,7 +288,9 @@ The algorithm starts with an initial paramaterisation, $\Gamma_0$. The specific 
 
 For each iteration of the algorithm, $i$, a novel paramaterisation $\Gamma'$ is drawn from a distribution $q$, which is `centred' on the previous state $\Gamma_{i-1}$. We call $q$ the `proposal distribution'. We then calculate the acceptance probability $a = acc(\Gamma_{i-1}, \Gamma') \in [0, 1]$. With probability $a$ we choose $\Gamma'$ as the state for this iteration $\Gamma_i$ -- otherwise we reject $\Gamma'$ and instead copy over the previous state $\Gamma_{i-1}$.
 
-The core of the function $acc(\Gamma, \Gamma^*)$ is the multiplication of two ratios. The first is the ratio of the posterior likelihood of $\Gamma^*$ to that of $\Gamma$. If it is greater than $1$, then $\Gamma^*$ is considered the more likely paramaterisation, while if it is less than $1$ then $\Gamma$ is considered more likely. The second ratio is called the `Hastings ratio'. It is the ratio of the likelihood of $\Gamma$ in the proposal ratio of $\Gamma^*$ to the likelihood of $\Gamma^*$ in the proposal ratio of $\Gamma$. Intuitively this can be thought of as `backward-step chance over forward-step chance'. Without this term, the Markov Chain would `slide away' from the desired equilibrium distribution with a bias towards those states that are more likely to be proposed.
+The core of the function $acc(\Gamma, \Gamma^*)$ is the multiplication of two ratios. The first is the ratio of the posterior likelihood of $\Gamma^*$ to that of $\Gamma$. If it is greater than $1$, then $\Gamma^*$ is considered the more likely paramaterisation, while if it is less than $1$ then $\Gamma$ is considered more likely. The second ratio is called the `Hastings ratio'. It is the ratio of the likelihood of $\Gamma$ in the proposal ratio of $\Gamma^*$ to the likelihood of $\Gamma^*$ in the proposal ratio of $\Gamma$. Intuitively this can be thought of as `backward-step chance over forward-step chance'. Without this term, the Markov Chain would `slide away' from the desired equilibrium distribution with a bias towards those states that the proposal distribution is more likely to `step towards' than `step away from'.
+
+Excepting the vanishingly unlikely scenario that the initial state $\Gamma_0$ is close to the global likelihood maxima, we can be certain that the initial states of the chain will not be a good approximation for the posterior distribution. Therefore, in our analyses, we discard them, instead sampling from the latter part of the chain. Formally speaking, the bias induced by the initial state is never wholly eliminated, but with a good MCMC implementation it becomes negligable.
 
 \section{Implementation}
 

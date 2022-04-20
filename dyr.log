@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.30)  19 APR 2022 14:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.30)  19 APR 2022 14:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -356,10 +356,7 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9.53561> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 121.
- [3] [4] [5] [6]
-Underfull \vbox (badness 3323) has occurred while \output is active []
-
- [7] (./dyr.bbl) [8
+ [3] [4] [5] [6] [7] (./dyr.bbl) [8
 
 ] (./dyr.aux) ) 
 Here is how much of TeX's memory you used:
@@ -371,7 +368,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  55i,16n,62p,1518b,358s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rep-cmsc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rep-cmrm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on dyr.pdf (8 pages, 237512 bytes).
+Output written on dyr.pdf (8 pages, 237927 bytes).
 PDF statistics:
  113 PDF objects out of 1000 (max. 8388607)
  83 compressed objects within 1 object stream
