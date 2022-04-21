@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex dyr"] 1650490761 "dyr.aux" "dyr.bbl" "dyr" 1650491100
+["bibtex dyr"] 1650573763 "dyr.aux" "dyr.bbl" "dyr" 1650581775
   "./IEEEtran.bst" 1649954835 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "dyr.aux" 1650491048 4097 5fc518482b63f97c1f8fc75d52abfe3a "pdflatex"
+  "dyr.aux" 1650581775 4441 3edd5d8aea35e3bd86c3af417837587b "pdflatex"
   "dyr.bib" 1649964840 10324 4e9c9fef19c5bc07c8766acd605ffe60 ""
   (generated)
   "dyr.bbl"
   "dyr.blg"
-["pdflatex"] 1650491100 "dyr.tex" "dyr.pdf" "dyr" 1650491100
+["pdflatex"] 1650581774 "dyr.tex" "dyr.pdf" "dyr" 1650581775
   "/home/jgb/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1648664632 1345251 acb4b6f8ac85315465aa350f046e66e6 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1642002329 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -116,9 +116,9 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1642002331 40136 b05acc85e8425979e52682d98a2bcacf ""
   "/usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1649954662 377441 44770e669a195f417564af1a86582e19 ""
   "IEEEtran.cls" 1649778381 281957 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
-  "dyr.aux" 1650491048 4097 5fc518482b63f97c1f8fc75d52abfe3a "pdflatex"
-  "dyr.bbl" 1650490761 4080 f9e3378b56456229dbd6977c8f06eff9 "bibtex dyr"
-  "dyr.tex" 1650491100 49513 5f48649f64a9823557eae8c55c826fd9 ""
+  "dyr.aux" 1650581775 4441 3edd5d8aea35e3bd86c3af417837587b "pdflatex"
+  "dyr.bbl" 1650573763 4080 f9e3378b56456229dbd6977c8f06eff9 "bibtex dyr"
+  "dyr.tex" 1650581773 57684 19300d6f43cd10ff945cccc275a7c714 ""
   "progdiagram.png" 1650483859 59425 27154b9baacc09a1d8c3ac33a981e542 ""
   (generated)
   "dyr.aux"

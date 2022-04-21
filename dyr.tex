@@ -300,7 +300,7 @@ Of course, as with all software, the first and most fundamental implementation d
 
 The design of \textit{Dyr} was inspired in part by Paul O. Lewis' Strom project, which sets an excellent example for how to write phylogenetic inference software.
 
-Following the example of Strom, BEAST, and MrBayes, \textit{Dyr} uses the open-source library BEAGLE 3 to perform the core likelihood calculations required by Felsenstein's algorithm. This library supports a high-performance CUDA backend, allowing likelihood calculations to be highly parallelised and executed on Nvidia graphics cards. However, BEAGLE is very low-level; it has no conception of trees, nodes, or taxa, instead dealing only with partial likelihood buffers and transition matrices. It is therefore the responsibility of the calling program to keep track of the correspondance between higher level data-structures and BEAGLE buffer indexes, and to determine the necessary operations to re-calculate the likelihood of the data given the parameters when the parameterisation is augmented.
+Following the example of Strom, BEAST, and MrBayes, \textit{Dyr} uses the open-source library BEAGLE 3 to perform the core likelihood calculations required by Felsenstein's algorithm. This library supports a high-performance CUDA backend, allowing likelihood calculations to be highly parallelised and executed on Nvidia graphics cards. However, BEAGLE is very low-level; it has no conception of trees, nodes, or taxa, instead dealing only with partial likelihood buffers and transition matrices. It is therefore the responsibility of the calling program to keep track of the correspondance between higher level data-structures and BEAGLE buffer indexes, and to determine the necessary operations to re-calculate the marginal likelihood when the parameterisation is augmented.
 
 The user inferface of \textit{Dyr} is through the command-line. An inference run is fully specified by a file called a `manifest' and a NEXUS file containing trait data. Program output, which is also configurable within the manifest, is printed to stdout.
 
@@ -318,24 +318,61 @@ Before starting the Markov Chain, \textit{Dyr} also creates a blank \texttt{fitz
 
 The program now enters the main-loop of the Metropolis-Hastings algorithm, which is handled by \textit{Dyr} directly. It calls the \texttt{step} function of its \texttt{fitzroy::MCMC} instance, and on most iterations this is all it does. However, at regular intervals, configurable in the manifest, it outputs information about the current chain state. As mentioned, in the latter part of the inference process it also takes phylogeny snapshots. These snapshots are only taken once every $1000$ steps to mitigate autocorrelation.
 
+At the end of the inference process a Maximum Clade Crediblity (MCC) tree $\psi_{mcc}$ is calculated from the set of snapshotted trees, and output in Newick format. The topology $\tau_{mcc}$ of the tree $\psi_{mcc}$ is defined as being equal to that of the tree within the set that has the highest sum clade frequency across all its clades, where clade frequency is the number of times a given clade appears within the sample. Then, to calculate the chronology $\delta_{mcc}$ of the MCC tree, we assign each clade root (i.e. node) a date equal to the median date of that clade in the set of trees, and calculate the branch lengths by simply traversing the tree.\footnote{Astute readers will note that this could lead to negative branch lengths. This is considered an acceptable, though unlikely, outcome of the MCC algorithm.}
+
+As it happens, our implementation of Maximum Clade Credibility kills two birds with one stone. Decomposing a tree into a list of its clades, each \texttt{Clade} uniquely identified by a hashable bitstring, is useful not only for tallying clade frequencies, but also for checking clade and ancestry constraints in the tree prior.
+
 \subsection{A Step in the Chain}
 
 We now take a deeper look at the \texttt{step} function of the Fitzroy MCMC implementation. This function is the heart of the entire system, since it performs a step of the Metropolis-Hastings algorithm.
+
+\subsubsection{Making a Move}
 
 The first task is to draw a new parameterisation from the proposal distribution of the current parameterisation. Up til now we have only spoken abstractly about this as an augmentation of the parameterisation, but in practice this is achieved by the selection and application of a `Move' from a set of available `Moves', whereby each Move describes a specific type of modfication that can be made to the parameterisation. For example, we have a move called \texttt{TreeNodeSwap}, which chooses two nodes of the tree at random and swaps their attachment points.
 
 The selection and application of a Move is achieved with \texttt{make\_move}, an associated function of \texttt{Propose}. This structure was supplied with the \texttt{Configuration} of the inference run when it was created and therefore only choses from the set of Moves applicable to this run. For example, the move \texttt{CoalescentIntervalResize} is not relevant when there is only one generalised interval (constant-population), so it is not registered in the set of moves at instantiation.
 
-The function \texttt{Propose::make\_move} choses a Move at random (according to a set of hand-tuned weights). In Rust terms, each Move is in fact a structure implementing the trait \texttt{Move}.\footnote{A Rust trait is equivalent to a typeclass in Haskell, and analogous, though not equivalent, to the concept of an abstract superclass in OOP languages.} Each such Move is required to have a function itself called \textt{make\_move}, which accepts the \texttt{Configuration} and a mutable reference to the current \texttt{Parameters}, and returns a \texttt{MoveResult}, the definition of which is given below.\footnote{Actually, this isn't the real definition; I removed some Rust idiosyncracies for the sake of accessibility.}
+The function \texttt{Propose::make\_move} choses a Move at random (according to a set of hand-tuned weights). In Rust terms, each Move is in fact a structure implementing the trait \texttt{Move}.\footnote{A Rust trait is equivalent to a typeclass in Haskell, and analogous, though not equivalent, to the concept of an abstract superclass in OOP languages.} Each such Move is required to have a function itself called \texttt{make\_move}. This function draws a specific augmentation from its own internal distribution, applies it to the \texttt{Parameters}, calculates the prior likelihood change and the Hastings ratio and returns them.
+
+At this point is is worth noting that although up until now we have spoken about likelihood calculations in the conventional way, internally our software works with the natural logarithms of likelihoods, known as `log-likelihoods'. This is necessary to maintain fidelity when working with the sort of very low likelihoods that are a natural consequence of using distributions over such a large parameter space, and also has the convenient upside of reducing multiplications and divisions into additions and subtractions.
+
+To be precise, every implementation of the function \texttt{Move::make\_move} is required to accept an immutable reference to the \texttt{Configuration} and a mutable reference to the current \texttt{Parameters}, and return a \texttt{MoveResult}, the definition of which is given below.\footnote{Actually, this isn't the real definition; I removed some Rust idiosyncracies.}
 
 \begin{verbatim}
 struct MoveResult {
     log_prior_likelihood_delta: double,
     log_hastings_ratio: double,
-    damage: Damage,
     revert: Revert,
+    damage: Damage
 }
 \end{verbatim}
+
+The \texttt{log\_prior\_likelihood\_delta} is the change in log prior likelihood, which is the log-likelihood equivalent to the prior likelihood ratio. Similarly, the \texttt{log\_hastings\_ratio} is the log-likelihood equivalent of the Hastings ratio.
+
+\subsubsection{Accept or Reject}
+
+The \texttt{step} function accepts the returned \texttt{MoveResult} and calls a function to calculate the new log marginal likelihood. It then determines the acceptance probability. In log-likelihood terms, this is calculated by summing the log prior likelihood delta, the log marginal likelihood delta, and the log hastings ratio. The move is then accepted if and only if the log acceptance probability is larger than the log of a uniform random variable in the range $[0, 1]$.
+
+If the move is not accepted then we need to revert the state of the \texttt{Parameters} back to their previous state. We have devised an elegant and flexible method for achieving this. In the definition of \texttt{MoveResult} above, note that there is a field \texttt{revert} of type \texttt{Revert}. The type \texttt{Revert} is a heap-allocated closure (anonymous function) that accepts the current state of the MCMC chain as a mutable reference. Each Move constructs a closure that closes upon the stored previous state of whichever parameter the Move augmented. If the \texttt{step} function decides to revert the Move, all it needs to do to restore the old state of the \texttt{Parameters} is to call \texttt{revert()}.
+
+This approach is elegant and efficient. It is elegant because the step function needs to know nothing at all about any of the individual Moves; it is perfectly generic. Furthermore, the usage of a closure to encapsulate the cached state means that the Move object itself can be entirely stateless. It is efficient because the closure only stores the \texttt{Parameters} that have changed. If a Move simply alters a global rate parameter, then the tree remains is unmodified and therefore its state does not need to be cached. If this state caching was performed within the \texttt{step} function itself, its lack of knowledge about the specific move that had been made would require it to clone the entire set of \texttt{Parameters}, at considerable cost to computational and memory resources. 
+
+If the move is accepted, the \texttt{revert} closure is never called. In any case, after having accepted or rejected the proposed parameterisation, the \texttt{step} function concludes: one iteration of Metropolis-Hastings has been completed.
+
+
+\subsubsection{Marginal Likelihood}
+  
+Although it is easily the most computationally intensive part of the inference process, we have only so far touched upon the calculation of log marginal likelihood. As discussed, the core heavy-lifting is performed by the BEAGLE 3 library. Making this library usable and ergonomic in Rust is achieved through three abstraction layers. 
+
+The first is the raw Rust bindings to the BEAGLE C API. These are auto-generated by the Rust library `bindgen'. The second is the low-level wrapper interface. This interface still exposes essentially the same functions, but it provides a translation layer between Rust types and C types. For example the C type \texttt{*double}, a potentially null 64-bit float pointer, corresponds to an \texttt{Option<\&mut f64>} -- an algebraic type that can optionally store a mutable reference to 64-bit float. These two layers constitute \texttt{libhmsbeagle-sys} -- a safe and usable, though unidiomatic, Rust binding to BEAGLE.
+
+The third abstraction layer, \texttt{libhmsbeagle-rs}, consumes the interface provided by \texttt{libhmsbeagle-sys}, and in turn exposes a powerful and idiomatic Rust reimagining of BEAGLE's core interface. It wraps BEAGLE's instance API in an RAII \texttt{Instance} structure. This means that for as long as an \texttt{Instance} is allocated in memory, it corresponds to a valid and live instance within BEAGLE.
+
+However, the most powerful abstraction that the \texttt{Instance} structure provides is what we refer to as 'buffer alternates'. To understand this feature, we must first recall the two basic datastructures upon which BEAGLE operates: partial likelihood buffers, or 'partials' for short; and transition matrix buffers, or simply 'matrices'. Every internal node of the phylogeny requires a corresponding partials buffer, while every node except for the root requires a corresponding transition matrix. When 'buffer alternates' are enabled, our system allocates two partials for each internal node and two matrices for each node excepting the root. These are known as `main' and `alternate' buffers. For each pair of buffers, we maintain a boolean flag in a structure called \texttt{Alternates} which signals which of the main and alternates buffer is currently active. Therefore, when we update a node's matrix, or re-calculate its partials, we do so using the active buffers.
+
+To demonstrate what the benefit of all this additonal book-keeping is, we must explain the purpose of the final parameter of the \texttt{MoveResult} structure, \texttt{damage}. Each Move is obliged to create a \texttt{Damage} object, which records the matrices and partials which have been invalidated by its augmentation to the \texttt{Parameters}. Notably, if any partial is invalidated, all partials between it and the root are necessarily also invalidated, so the \texttt{Damage} structure has an associated function \texttt{mark\_partials\_to\_root}. When a Move has been made, the \texttt{step} function calls a function \texttt{flip\_by\_damage}, which switches all the partials and matrices which have been `damaged' (i.e. invalidated) onto their other buffer, be that the main or the alternate.
+
+Having flipped the appropriate buffers, the \texttt{step} function calculates the new log marginal likelihood. Again using the \texttt{Damage} as a reference, an array of new likelihood operations is built and passed to BEAGLE. Each operation corresponds to a single step of Felsenstein's algorithm; involving only a node and its two children. This ensures that no more than the minimum amount of computation necessary to compute the new log marginal likelihood is performed.
 
 \section{Results}
 
