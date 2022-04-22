@@ -31,6 +31,10 @@ C.~Renfrew and R.~Drews, ``The anatolian origins of proto-indo-european and the
   autochthony of the hittites,'' \emph{Journal of Indo-European Studies}, pp.
   36--63, 2001.
 
+\bibitem{felsenstein2004inferring}
+J.~Felenstein, \emph{Inferring phylogenies}.\hskip 1em plus 0.5em minus
+  0.4em\relax Sinauer associates Sunderland, MA, 2004, vol.~2.
+
 \bibitem{swadesh1955towards}
 M.~Swadesh, ``Towards greater accuracy in lexicostatistic dating,''
   \emph{International journal of American linguistics}, vol.~21, no.~2, pp.
@@ -86,9 +90,5 @@ D.~L. Ayres, M.~P. Cummings, G.~Baele, A.~E. Darling, P.~O. Lewis, D.~L.
   ``Beagle 3: improved performance, scaling, and usability for a
   high-performance computing library for statistical phylogenetics,''
   \emph{Systematic biology}, vol.~68, no.~6, pp. 1052--1061, 2019.
-
-\bibitem{felsenstein2004inferring}
-J.~Felenstein, \emph{Inferring phylogenies}.\hskip 1em plus 0.5em minus
-  0.4em\relax Sinauer associates Sunderland, MA, 2004, vol.~2.
 
 \end{thebibliography}
