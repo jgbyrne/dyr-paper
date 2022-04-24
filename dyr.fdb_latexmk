@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex dyr"] 1650590077 "dyr.aux" "dyr.bbl" "dyr" 1650590224
+["bibtex dyr"] 1650842451 "dyr.aux" "dyr.bbl" "dyr" 1650842470
   "./IEEEtran.bst" 1649954835 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "dyr.aux" 1650590224 4705 c9580cde0ca60baf39a6a935a809e3cc "pdflatex"
+  "dyr.aux" 1650842470 6742 a2677159a537a1a01853bd801613209b "pdflatex"
   "dyr.bib" 1649964840 10324 4e9c9fef19c5bc07c8766acd605ffe60 ""
   (generated)
   "dyr.bbl"
   "dyr.blg"
-["pdflatex"] 1650590224 "dyr.tex" "dyr.pdf" "dyr" 1650590224
+["pdflatex"] 1650842470 "dyr.tex" "dyr.pdf" "dyr" 1650842470
   "/home/jgb/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1648664632 1345251 acb4b6f8ac85315465aa350f046e66e6 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1642002329 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -65,6 +65,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb" 1254269338 27863 09ce3735688ffde955e72da27c95b61a ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy5.pfb" 1254269338 28210 987b40585e9bcf6463d6155bb4219492 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy7.pfb" 1254269338 27941 d1f5d03f61a46c3fcc3a2ba904ddda52 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb" 1254269338 27802 5c876bb2c4040caaf035d60bd74a86bd ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb" 1136849748 45758 19968a0990191524e34e1994d4a31cb6 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb" 1136849748 35941 f27169cc74234d5bd5e4cca5abafaabb ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb" 1136849748 44648 23115b2a545ebfe2c526c3ca99db8b95 ""
@@ -126,9 +127,10 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1642002331 40136 b05acc85e8425979e52682d98a2bcacf ""
   "/usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1649954662 377441 44770e669a195f417564af1a86582e19 ""
   "IEEEtran.cls" 1649778381 281957 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
-  "dyr.aux" 1650590224 4705 c9580cde0ca60baf39a6a935a809e3cc "pdflatex"
-  "dyr.bbl" 1650590077 4080 29989335c201476ed968fdc7c5c48cec "bibtex dyr"
-  "dyr.tex" 1650590223 62626 ded697c46dbce7e170340f554d4a6c25 ""
+  "dyr.aux" 1650842470 6742 a2677159a537a1a01853bd801613209b "pdflatex"
+  "dyr.bbl" 1650842451 4080 29989335c201476ed968fdc7c5c48cec "bibtex dyr"
+  "dyr.tex" 1650842469 75269 03d42bd1f45aeed9df1e865770be14ca ""
+  "local.png" 1650803327 13700 74b86d5d05b11ee87b931fe60375cbd8 ""
   "progdiagram.png" 1650586940 52939 666b003cc03487c048cf6d22f78cb0b2 ""
   (generated)
   "dyr.aux"

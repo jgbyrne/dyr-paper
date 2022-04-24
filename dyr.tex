@@ -175,7 +175,7 @@ We now seek to explain how the substitution model is used to calculate the proba
 \end{align*}
 
 The core of the substitution model is the rate matrix, which describes the rates at which states mutate into each other. These matrices can be quite complex, but we opt for the simplest choice, the Generalised Time Reversible (GTR) model.\footnote{Chang et al. calls this the Restriction Site Character (RSC) model; the two are equivalent in the case of binary traits.} We have already seen how the stationary frequencies $\pi_0$ and $\pi_1$ influence the likelihood calculation, but they are also at the heart of the binary GTR rate matrix. 
-\begin{equation}
+\begin{equation}\label{eqn:ratematrix}
 \textbf{Q} = \frac{1}{2\pi_0\pi_1} \begin{bmatrix}
 -\pi_1 & \pi_1\\
 \pi_0 & -\pi_0
@@ -184,7 +184,7 @@ The core of the substitution model is the rate matrix, which describes the rates
 
 As the length of time over which a trait evolves increases, the probability of it being in a state $u$ asymptopically approaches $\pi_u$, and the state it was initially in becomes irrelevant. To be more precise, for every branch $(a, b)$ in the tree $\psi$, for every trait $i$, the transition probabilities $Pr^i_{a,b}\left(u\,\vert\,t\right)$ are defined by the transition matrix $\textbf{P}^i_{a,b}$, where:
 
-\begin{equation}
+\begin{equation}\label{eqn:rate}
 \textbf{P}^i_{a,b} = \exp\left(\textbf{Q} \cdot \delta_{a,b} \cdot \eta^i_{a,b}\right) \text{  \ where  \  } \eta^i_{a,b} = \mu \cdot \gamma_i \cdot \rho_{a,b}
 \end{equation}
 
@@ -411,6 +411,100 @@ Having flipped the appropriate buffers, the \texttt{step} function is free to ca
 The operations are applied, the new log marginal likelihood is summed and read-off from the root node, and control flow returns to the \texttt{step} function, as we have seen. Now the purpose of the whole enterprise becomes apparent: in the instance that the augmentation is rejected, the \texttt{flip\_by\_damage} function is called again with the same \texttt{Damage} as an argument, and the effective state of the BEAGLE likelihood engine \texttt{Instance} is as if the new parameterisation had never been suggested. Conversely, if the new parameterisation is accepted, the buffers are not flipped again; they become themselves the baseline state of the system.
 
 It may not be immediately obvious why this is such a key optimisation until one considers that an MCMC process might reject many successive moves. Without buffer alternates, which enable a baseline state of the likelihood engine to be preserved until the chain advances, each rejected move would require a ground-up likelihood recalculation.
+
+\subsection{Implementing Rate Variation}
+
+We previously described the evolutionary rates at each branch, for each site, in equation \eqref{eqn:rate}. However, that description abstracted over the practical implementation, which although essentially equivalent in outcome, follows a somewhat non-obvious methodology.
+
+\subsubsection{Among Site Rate Variation}
+
+As stated, we consider site rates to be drawn from a Gamma distribution with mean $1$, described by a shape parameter $\alpha$. However, it would be computationally infeasible to actually seelct a different site rate from this Gamma distribution for each site. Therefore, we instead use a standard technique, known as the `Discrete Gamma Model'. In this approach, we slice our site-rate Gamma distribution into $k$ categories, each with equal probability mass, and then take the mean of each category. The likelihood of the data evolving along an edge is therefore taken to be equal to the the average  likelihood across each of the Gamma category rates. Conventionally, $4$ such Gamma categories are used, which is considered to be sufficient to produce a good approximation.
+
+It may not be immediately obvious why this approach is equivalent to selecting specific Gamma site rates from a prior distribution. To understand why this approach is effective, one should recall that MCMC is essentially an method for approximating the integral of the posterior likelihood function. In esssence, then, the Discrete Gamma Model simply approximates the integration step for the site-rate parameters directly. As mentioned, the main reason for this is computational cost. By using a Discrete Gamma Model with $k$ site-rate categories, we multiply the computational cost of performing Felsenstein's algorithm by $k$. This is still somewhat painful, even with $k=4$, but it is much more tolerable than the far greater cost that would be endured if each site had a separate rate, inferred through MCMC.
+
+\subsubsection{Among Branch Rate Variation}
+
+In a similar manner to site-rates, we model branch-rates as being drawn from a Gamma distribution with mean $1$, and with shape parameter $\beta$. However, since each branch likelihood calculation is performed separately, there is no significant computational cost to inferring different rates for each branch. As with site-rates, our approach begins with splitting up the Gamma distribution into categories. Our approach here is to construct as many categories as there are branches. As with our site-rate categories, each has equal probability mass. We then assign each branch a category index. For example, the branch with category $0$ has branch-rate equal to the mean of the left-most Gamma category, the branch with category $1$ has branch-rate equal to the mean of the second left-most category, and so on up until the right-most category, which is category $n - 1$,assuming the tree has $n$ branches. The purpose of this indirection is to allow us to modify the shape parameter $\beta$ by an MCMC move without invalidating the category assignment. As shall be discussed, we also have an MCMC move to swap rate categories between branches.
+
+BEAGLE allows us to set the value of a given transition matrix based on a model (i.e. the rate matrix and the site-rate categories) and an edge length. When we provide the edge lengths, what we actually provide is the branch length multiplied by the base rate multiplied by the branch-rate corresponding to that branch's rate allocation. In this way the transition matrices are prepared for usage in likelihood calculations.
+
+\subsection{Decomposing the Rate Matrix}
+
+An expression for the rate matrix \textbf{Q} is given in equation \eqref{eqn:ratematrix}. For BEAGLE to use this rate matrix in its likelihood calculations it requires us to provide it in decomposed form, as eigenvalues, eigenvectors, and inverse eigenvectors.\footnote{The columns of the inverse of the matrix of eigenvectors} We first multiply through by the scale factor outside the matrix:
+
+\begin{equation}
+    \textbf{M} = \begin{bmatrix}
+-a & a\\
+b & -b
+\end{bmatrix} \text{ \ given that \ } a = \frac{1}{2 \pi_0} \;,\; b = \frac{1}{2 \pi_1}
+\end{equation}
+
+\noindent The eigen decomposition of this is the following:
+\begin{align*}
+    \text{Eigenvectors} &= [1,\, 1],\;\;  [-\frac{a}{b},\, 1] \\
+    \text{Inverse Eigenvectors} &= [\pi_0,\, -\pi_0],\;\;  [\pi_1,\, \pi_0]\\
+    \text{Eigenvalues} &= 0,\;\; -a-b
+\end{align*}
+
+This is the decomposed form of the rate matrix that is used by BEAGLE. Its simplicity is a pleasant consequence of our relatively simple Binary GTR model; for more complicated rate matrixes, performing this decomposition can be substantially harder.
+
+\subsection{Spanning the Parameter Space}
+
+An important implementation practicality of MCMC is ensuring that the algorithm is able to efficiently move about the parameter space, and (in principle) be able to reach every non-zero prior likelihood parameterisation. This is achieved by choosing an sufficiently broad set of MCMC moves. Our proposal distribution supports the following moves:
+
+\subsubsection{Tree LOCAL Move}
+
+The most complex move we implement, the LOCAL move was outlined by Larget and Simon in a 1999 paper. We present a brief outline of this operation.
+
+First, an edge between internal nodes, $(v, u)$, is selected, such that $v$ is the parent of $u$. We will discuss only the general case where $v$ is not the root; a modified, though fundamentally similar procedure is followed if $v$ is the root. Therefore $v$ has a parent node which we call $w$. Between them, $v$ and $u$ have three additional children. We will refer to the children of $u$ as $a$ and $b$, and the child of $v$ that is not $u$ as $c$ (see Fig. \ref{fig:local}).
+
+Our intention is to randomly assign new heights to the nodes $v$ and $u$, and re-attach their children $a$, $b$, and $c$ at random. So, for example, $c$, which starts out as the child of $v$, may be re-attached as a child of $u$.
+
+However, we observe that there are four constraints on the new heights that we give to $v$ and $u$. Firstly, neither $v$ nor $u$ can be moved higher than $w$. Secondly, $u$ must not be moved higher than $v$. And thirdly, to allow us to re-attach all three children, $u$ must remain above at least two of $a$, $b$, and $c$, while $v$ must remain above all three. Note that in some cases it may be possible for $v$ to move below one of $a$ and $b$, so long as it remains above the other and also remains above $c$.
+
+Therefore, to implement the LOCAL move, we create two uniform distributions and draw a value from each. The first distribution is between the height of $w$, and the height of the highest node out of $a$, $b$, and $c$. We call the value we draw from this distribution $h_1$. The second distribution is between the height of $w$, and the height of the second highest node out of $a$, $b$, and $c$. We call the value we draw from this distribution $h_2$.
+
+It is probable, though not certain, that $h_1 > h_2$. However what is certain is that both values are higher than the lowest two child nodes, and at least one of them is higher than the highest child node. So we can safely use these values as the new heights of $v$, and $u$. Naturally, we use the higher value out of $h_1$ and $h_2$ as the new height of $v$, and the lower of the two as the new height of $u$.
+
+We now re-attach $a$, $b$, and $c$. If $h_2$ happened to be lower than the highest child node, then we have no choice in the matter. In this case it is certain that $h_2$ is lower than $h_1$, and therefore is the new height of $u$, and therefore $u$ is lower than the highest child node. So the highest child node is attached to $v$, and the lower two are attached to $u$.
+
+Conversely, if $h_2$ is higher than the highest child node, then we can re-attach the children any way we like. We choose one node out of $a$, $b$, and $c$ at random to be the child of $v$, and the other two become the children of $u$.
+
+Re-attaching the children is the final step of the LOCAL move. The genius of it is that since it only modifies one small section of the tree, it does not require any fiddly and computationally expensive recursions to propogate changes across the entire structure. The nodes that form the 'perimeter' of the focused segment -- namely $w$, $a$, $b$, and $c$ -- are fixed in place; all that changes is $v$ and $u$, and the edges linking $v$ and $u$ to the rest of the tree. Nonetheless, since it allows nodes to change parents, as well as change height, the LOCAL move alone is capable of almost entirely spanning the space of possible trees. In fact, the only desirable augmentation to the tree the LOCAL move is not capable of making is changing the dates of tips, since they can never be either $u$ or $v$. For achieving that, we need a separate move.
+
+One important consideration when implementing the LOCAL move is the Hastings Ratio. This needs to be taken into account in cases where the node $u$ moves `across' the level of $c$. When $u$ moves from from below the level of $c$ to above it, any of the three child nodes can be chosen to attach to $v$. However, if we consider the same move in reverse, with $u$ moving from above the level of $c$ to below it, there is only one possible outcome, which is for the child nodes to remain attached as they were before. Therefore, the same move has three times the likelihood density in the proposal distribution going backwards when compared to going forwards. To account for this, the Hastings Ratio for the forwards move is $3$, while it is $\frac{1}{3}$ for the backwards move. 
+\begin{figure}
+\caption{An example of a tree segment as seen by the LOCAL move}\label{fig:local}
+\vspace{0.2cm}
+\includegraphics[width=4cm,center]{local}
+\end{figure}
+
+\subsubsection{Tree Tip Move}
+As mentioned, the only thing the LOCAL move is unable to do to augment our trees is modify tip (leaf) ages. For most tips this is not a problem, as most tips are fixed in the present day ($t = 0$). However, as mentioned previously, our software supports a type of constraint called a tip calibration, which allows a tip to fall anywhere within a specified date range. These calibrations are of outsize importance for our project, since they are essentially the `yardstick' by which time-depth is determined. We therefore implement a move which nudges the position of a randomly chosen tip-calibrated taxa by a small, random amount.
+
+\subsubsection{Tree Node Swap}
+The LOCAL move and the tip move are sufficient to fully span the space of possible trees. However, to improve convergence, escape local minima, and prevent constraints from `trapping' the tree in specific regions of parameter space, we implement a third tree operation. The tree node swap is as it sounds; we choose two nodes and attempt to swap them. If it is impossible to do so (for example, if one node is younger than the other's parent), then we consider the move to have zero prior density and abort.\footnote{Since we deal with log-likelihoods, we handle this case by returning from \texttt{make\_move} a log prior likelhood delta of $-\infty$. This is handled as a special case in the \texttt{step} function and results in instant rejection, short-circuiting the marginal likelihood calculation. Several moves use this facility when they select augmentations that they find to be \textit{a priori} impossible.}
+
+
+\subsubsection{Coalescent Interval Resize}
+
+This move applies only when the generalised skyline tree prior is in use. This move selects a generalised interval and resizes it. Recall that a generalised interval is a contiguous grouping of coalescent intervals. Therefore, this move can be conceived of as taking a coalescent interval from the beginning or end of one generalised interval, and giving it to the adjacent generalised interval. Of course, care is taken to ensure that a generalised interval is never left with zero width.
+
+\subsubsection{Coalescent Population Rescale and Augment}
+
+There are two moves for augmenting the coalescent population parameters. The rescale move multiplies all the paramaters by the same randomly chosen factor, while the augment move multiples a single randomly chosen parameter by a randomly chosen factor. In principle, the augment move alone could span the parameter space, however the rescale move is also implemented to improve convergence and to allow the tree prior to `respond' to changes in timescale.
+
+\subsubsection{ABRV Category Swap}
+
+
+
+\subsubsection{ABRV Shape Move}
+
+\subsubsection{ASRV Shape Move}
+
+\subsubsection{Base Rate Move}
+
+\subsubsection{Pi One Move}
 
 \section{Results}
 

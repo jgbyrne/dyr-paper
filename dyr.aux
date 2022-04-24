@@ -27,6 +27,8 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Felsenstein's Algorithm}{4}{}\protected@file@percent }
 \newlabel{eqn:felsenstein}{{3}{4}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}Substitution Model and Trait Evolution}{4}{}\protected@file@percent }
+\newlabel{eqn:ratematrix}{{4}{4}}
+\newlabel{eqn:rate}{{5}{4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Prior Distributions}{5}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1}Tree Constraints}{5}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}Coalescent Priors}{5}{}\protected@file@percent }
@@ -46,11 +48,28 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Making a Move}{8}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}Accept or Reject}{9}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.3}Marginal Likelihood}{9}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Results}{10}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Comparison with Other Research}{10}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Performance Analysis}{10}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}Evaluation and Future Steps}{10}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Implementing Rate Variation}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Among Site Rate Variation}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Among Branch Rate Variation}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Decomposing the Rate Matrix}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Spanning the Parameter Space}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1}Tree LOCAL Move}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2}Tree Tip Move}{11}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces An example of a tree segment as seen by the LOCAL move}}{12}{}\protected@file@percent }
+\newlabel{fig:local}{{2}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.3}Tree Node Swap}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.4}Coalescent Interval Resize}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.5}Coalescent Population Rescale and Augment}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.6}ABRV Category Swap}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.7}ABRV Shape Move}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.8}ASRV Shape Move}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.9}Base Rate Move}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.10}Pi One Move}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Results}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Comparison with Other Research}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Performance Analysis}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Evaluation and Future Steps}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{12}{}\protected@file@percent }
 \bibstyle{ieeetran}
 \bibdata{dyr}
 \bibcite{gimbutas1974gods}{1}
@@ -66,5 +85,5 @@
 \bibcite{ronquist2012mrbayes}{11}
 \bibcite{bouckaert2014beast}{12}
 \bibcite{ayres2019beagle}{13}
-\@writefile{toc}{\contentsline {section}{References}{11}{}\protected@file@percent }
-\gdef \@abspage@last{11}
+\@writefile{toc}{\contentsline {section}{References}{13}{}\protected@file@percent }
+\gdef \@abspage@last{13}
