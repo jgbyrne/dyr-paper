@@ -188,7 +188,7 @@ As the length of time over which a trait evolves increases, the probability of i
 \textbf{P}^i_{a,b} = \exp\left(\textbf{Q} \cdot \delta_{a,b} \cdot \eta^i_{a,b}\right) \text{  \ where  \  } \eta^i_{a,b} = \mu \cdot \gamma_i \cdot \rho_{a,b}
 \end{equation}
 
-As previously stated, the value $\delta_{a,b}$ is the length (in years) of the branch $(a, b)$. The value $\eta^i_{a,b}$ is the rate for the trait $i$ on the branch $(a, b)$, calculated as the product of three rate parameters. The first rate,  $\mu$, is the base rate -- a global parameter that cancels out the units of the branch lengths and controls the overall rate of evolution. The second, $\gamma_i$, is the site rate,\footnote{The term `site' is a relic from bioinformatics, where traits typically correspond to specific sites on the genome} which is specific to this trait $i$. It is drawn from a Gamma distribution $\Gamma(\alpha, \frac{1}{\alpha})$. The third rate, $\rho_{a,b}$, is the branch rate, which is specific to this branch. It is drawn from a log-normal distribution $\log \mathcal{N}(-\frac{\beta^2}{2}, \beta^2)$. Both of these distributions have a mean of $1$, so regardless of their shapes the overall average rate is equal to $\mu$. The choices of distributions are partly informed by implementation pragamatics and partly by the flexibility in shape that can be attained by modfications to $\alpha$ and $\beta$. \footnote{This paragraph abstracts quite significantly over the specifics of how these rates are actually chosen, which shall be discussed later.}
+As previously stated, the value $\delta_{a,b}$ is the length (in years) of the branch $(a, b)$. The value $\eta^i_{a,b}$ is the rate for the trait $i$ on the branch $(a, b)$, calculated as the product of three rate parameters. The first rate,  $\mu$, is the base rate -- a global parameter that cancels out the units of the branch lengths and controls the overall rate of evolution. The second, $\gamma_i$, is the site rate,\footnote{The term `site' is a relic from bioinformatics, where traits typically correspond to specific sites on the genome} which is specific to this trait $i$. It is drawn from a Gamma distribution $\Gamma(\alpha, \frac{1}{\alpha})$. The third rate, $\rho_{a,b}$, is the branch rate, which is specific to this branch. It is drawn from a Log-Normal distribution $\log \mathcal{N}(-\frac{\beta^2}{2}, \beta^2)$. Both of these distributions have a mean of $1$, so regardless of their shapes the overall average rate is equal to $\mu$. The choices of distributions are partly informed by implementation pragamatics and partly by the flexibility in shape that can be attained by modfications to $\alpha$ and $\beta$. \footnote{This paragraph abstracts quite significantly over the specifics of how these rates are actually chosen, which shall be discussed later.}
 
 At this point the reader may be questioning the necessity of allowing rates to vary both across sites and and across branches. However there is a strong justification for both laxities. Variation in site rate is necessary because words vary greatly in their volatility. Certain common words, in particular numerals, change incredibly rarely. Others are considerably more susceptible to replacement. Equally, branch rates must be variable because languages evolve at dramatically different rates. A failure to account for this fact was the downfall of much early research into quantitiative historical linguistics. The classic (though by no means sole) exemplar is the case of the Nordic languages; while Norwegians find Old Norse virtually incomprehensible, Icelanders can read it as easily as an Englishman can read Jane Austen. The reason for this is simply that the rate of change of Icelandic has been remarkably slow, while that of Norwegian has been reasonably fast.
 
@@ -277,7 +277,7 @@ All MCMC methods produce a randomly generated sequence of states, such that each
 
 \subsubsection{Metropolis-Hastings Algorithm}
 
-Strictly speaking, Markov Chain Monte Carlo is a family of different stochastic methods; the one we employ is known as the `Metropolis-Hastings algorithm'. A description of this algorithm is given below.
+Strictly speaking, Markov Chain Monte Carlo is a family of different stochastic methods; the one we employ is known as the `Metropolis-Hastings algorithm'. A pseudocode description of this algorithm is given below.
 
 \begin{equation*}
 acc(\Gamma, \Gamma^*) := min\left\{\frac{f(\Gamma^*|\,x)}{f(\;\Gamma\,|\,x)} \cdot \frac{q(\;\Gamma\,|\,\Gamma^*)}{q(\Gamma^*|\;\Gamma\,)},\;1\,\right\}
@@ -424,22 +424,22 @@ It may not be immediately obvious why this approach is equivalent to selecting s
 
 \subsubsection{Among Branch Rate Variation}
 
-In a similar manner to site-rates, we model branch-rates as being drawn from a Gamma distribution with mean $1$, and with shape parameter $\beta$. However, since each branch likelihood calculation is performed separately, there is no significant computational cost to inferring different rates for each branch. As with site-rates, our approach begins with splitting up the Gamma distribution into categories. Our approach here is to construct as many categories as there are branches. As with our site-rate categories, each has equal probability mass. We then assign each branch a category index. For example, the branch with category $0$ has branch-rate equal to the mean of the left-most Gamma category, the branch with category $1$ has branch-rate equal to the mean of the second left-most category, and so on up until the right-most category, which is category $n - 1$,assuming the tree has $n$ branches. The purpose of this indirection is to allow us to modify the shape parameter $\beta$ by an MCMC move without invalidating the category assignment. As shall be discussed, we also have an MCMC move to swap rate categories between branches.
+In a similar manner to site-rates, we model branch-rates as being drawn from a distribution with mean $1$, and with shape parameter $\beta$. A key difference, though, is that here the distribution is Log-Normal. Additionally, since each branch likelihood calculation is performed separately, there is no significant computational cost to inferring different rates for each branch. As with site-rates, our approach begins with splitting up the Log-Normal distribution into categories. Our approach here is to construct as many categories as there are branches. As with our site-rate categories, each has equal probability mass. We then assign each branch a category index. For example, the branch with category $0$ has branch-rate equal to the mean of the left-most Log-Normal category, the branch with category $1$ has branch-rate equal to the mean of the second left-most category, and so on up until the right-most category, which is category $n - 1$,assuming the tree has $n$ branches. The purpose of this indirection is to allow us to modify the shape parameter $\beta$ by an MCMC move without invalidating the category assignment. As shall be discussed, we also have an MCMC move to swap rate categories between branches.
 
 BEAGLE allows us to set the value of a given transition matrix based on a model (i.e. the rate matrix and the site-rate categories) and an edge length. When we provide the edge lengths, what we actually provide is the branch length multiplied by the base rate multiplied by the branch-rate corresponding to that branch's rate allocation. In this way the transition matrices are prepared for usage in likelihood calculations.
 
 \subsection{Decomposing the Rate Matrix}
 
-An expression for the rate matrix \textbf{Q} is given in equation \eqref{eqn:ratematrix}. For BEAGLE to use this rate matrix in its likelihood calculations it requires us to provide it in decomposed form, as eigenvalues, eigenvectors, and inverse eigenvectors.\footnote{The columns of the inverse of the matrix of eigenvectors} We first multiply through by the scale factor outside the matrix:
+An expression for the rate matrix \textbf{Q} is given in equation \eqref{eqn:ratematrix}. For BEAGLE to use this rate matrix in its likelihood calculations it requires us to provide it in decomposed form, as eigenvalues, eigenvectors, and inverse eigenvectors.\footnote{The columns of the inverse of the matrix of eigenvectors} We need multiply through by the scale factor outside the matrix:
 
 \begin{equation}
-    \textbf{M} = \begin{bmatrix}
+    \textbf{Q} = \begin{bmatrix}
 -a & a\\
 b & -b
 \end{bmatrix} \text{ \ given that \ } a = \frac{1}{2 \pi_0} \;,\; b = \frac{1}{2 \pi_1}
 \end{equation}
 
-\noindent The eigen decomposition of this is the following:
+\noindent Then the eigen decomposition of \textbf{Q} is the following:
 \begin{align*}
     \text{Eigenvectors} &= [1,\, 1],\;\;  [-\frac{a}{b},\, 1] \\
     \text{Inverse Eigenvectors} &= [\pi_0,\, -\pi_0],\;\;  [\pi_1,\, \pi_0]\\
@@ -483,8 +483,7 @@ One important consideration when implementing the LOCAL move is the Hastings Rat
 As mentioned, the only thing the LOCAL move is unable to do to augment our trees is modify tip (leaf) ages. For most tips this is not a problem, as most tips are fixed in the present day ($t = 0$). However, as mentioned previously, our software supports a type of constraint called a tip calibration, which allows a tip to fall anywhere within a specified date range. These calibrations are of outsize importance for our project, since they are essentially the `yardstick' by which time-depth is determined. We therefore implement a move which nudges the position of a randomly chosen tip-calibrated taxa by a small, random amount.
 
 \subsubsection{Tree Node Swap}
-The LOCAL move and the tip move are sufficient to fully span the space of possible trees. However, to improve convergence, escape local minima, and prevent constraints from `trapping' the tree in specific regions of parameter space, we implement a third tree operation. The tree node swap is as it sounds; we choose two nodes and attempt to swap them. If it is impossible to do so (for example, if one node is younger than the other's parent), then we consider the move to have zero prior density and abort.\footnote{Since we deal with log-likelihoods, we handle this case by returning from \texttt{make\_move} a log prior likelhood delta of $-\infty$. This is handled as a special case in the \texttt{step} function and results in instant rejection, short-circuiting the marginal likelihood calculation. Several moves use this facility when they select augmentations that they find to be \textit{a priori} impossible.}
-
+The LOCAL move and the tip move are sufficient to fully span the space of possible trees. However, to improve convergence, escape local minima, and prevent constraints from `trapping' the tree in specific regions of parameter space, we implement a third tree operation. The tree node swap is as it sounds; we choose two nodes and attempt to swap them. If it is impossible to do so (for example, if one node is younger than the other's parent), then we consider the move to have zero prior density and abort. Since we deal with log-likelihoods, we handle this case by returning from \texttt{make\_move} a log prior likelhood delta of $-\infty$. This is handled as a special case in the \texttt{step} function and results in instant rejection, short-circuiting the marginal likelihood calculation. Several moves use this facility when they select augmentations that they find to be \textit{a priori} impossible.
 
 \subsubsection{Coalescent Interval Resize}
 
@@ -496,15 +495,15 @@ There are two moves for augmenting the coalescent population parameters. The res
 
 \subsubsection{ABRV Category Swap}
 
+As has been discussed, each branch is assigned the index of a branch-rate category. This move selects two branches at random and swaps their indices. This move produces no change in prior likelihood, since branch-rates are considered uncorrelated, and has no Hastings ratio. Therefore its success or failure is wholly dependant on the marginal likelihood ratio (and, of course, random chance).
 
+\subsubsection{ABRV Shape, ASRV Shape, and Base Rate}
 
-\subsubsection{ABRV Shape Move}
-
-\subsubsection{ASRV Shape Move}
-
-\subsubsection{Base Rate Move}
+Each of these rate-related parameters has an associated MCMC move. In each case, a narrow Normal distribution around the current value is used to propose the new value for the parameter. It is not necessary to calculate Hastings ratios, since the Normal distribution is symmetric, however it is important to catch the case of the selected value being less than or equal to zero and assign it zero prior density. As discussed, each of these paramaters has its own prior distribution; thus we duly calculate the change in log prior density in each case.
 
 \subsubsection{Pi One Move}
+
+The final move is the $\pi_1$ move. Recall that $\pi_1$, the stationary frequency of trait-presence, may vary between $0$ and $1$. It has a uniform prior, so excepting cases where the proposed value -- again drawn from a narrow Normal distribution -- is out-of-bounds, there is no change in log prior likelihood. As with all global substitution model parameters, changing this value causes `full damage' to the tree and thus all transition matrices and prior buffers must be recalculated.
 
 \section{Results}
 
