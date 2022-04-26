@@ -8,7 +8,7 @@
 
 \usepackage{cite}
 
-\graphicspath{./figures/}
+\graphicspath{{./figures/}}
 
 \usepackage{amsthm, amsmath, amsfonts}
 \interdisplaylinepenalty=2500
@@ -505,9 +505,42 @@ Each of these rate-related parameters has an associated MCMC move. In each case,
 
 The final move is the $\pi_1$ move. Recall that $\pi_1$, the stationary frequency of trait-presence, may vary between $0$ and $1$. It has a uniform prior, so excepting cases where the proposed value -- again drawn from a narrow Normal distribution -- is out-of-bounds, there is no change in log prior likelihood. As with all global substitution model parameters, changing this value causes `full damage' to the tree and thus all transition matrices and prior buffers must be recalculated.
 
-\section{Results}
+\section{Results and Analysis}
 
-\subsection{Comparison with Other Research}
+We now show the results of applying \textit{Dyr} to real datasets. We use the same curated \textsc{Narrow}, \textsc{Medium}, and \textsc{Broad} subsets of the IELEX Indo-European lexical trait database as Chang et al. and Rama.
+
+We first present our main analyses, using our preferred prior model -- the constant-population coalescent prior with clade and ancestry constraints.
+
+Analysis A, which uses the \textsc{Broad} dataset, yields an MCC tree with a root age of 6008 years before present. This root age firmly supports the Steppe hypothesis for the origin of Proto-Indo-European, which is premised on a root age of between 5500 and 6500 years before the present.
+
+Analysis B, which uses the \textsc{Medium} dataset, yields an MCC tree with a root age of 7692 years before present. This root age is harder to intepret, being too old for the standard window of the Steppe hypothesis, but too young for that of the Anatolian hypothesis (between 8000 and 9500 years before present). Our results here are in line with those of Chang et al. and Rama, who both find that the \textsc{Medium} dataset yields substantially older root ages than either the \textsc{Broad} or \textsc{Narrow} datasets.
+
+Analysis C, which uses the \textsc{Narrow} dataset, yields an MCC tree with a root age of 6309 years before present. As with the \textsc{Broad} dataset, this root age is firmly in the domain of the Steppe hypothesis. This analysis is of particular interest as it is directly comparable to analysis A6 of Chang et al., which yielded a root age of 6130 years before present. Clearly these dates are similar, and inspires confidence that our software is functioning correctly. However, they are not the same -- why is this? One reason might be that Chang et al. implement a feature called `ascertainment bias correction', which aims to account for postulated traits which are not observed at any tips. Another reason is of course simply the randomness inherent to the MCMC process -- though one would hope that this would be overcome with the long, highly converged chains that both our analyses used. Finally, the possibility of course exists that subtle bugs or differences in how our software implements various parts of the MCMC process have affected the results. If this is the case, though, the impact does not seem to be too dramatic.
+
+To further investigate the correlation between the results of our software and those obtained by Chang et. al, we tried to replicate their analysis A3, which employs the \textsc{Broad} dataset and the generalised skyline plot tree prior with $5$ generalised intervals. Their analysis yielded a root age of 5950 before present, while ours was just slightly older at 6022 -- not significantly different from our equivalent result with the constant-population prior, in fact. This result furthers our confidence in the reliability of \textit{Dyr} and in its capability on real-world phylolinguistic tasks.
+
+Of course, it is not sufficient for our software to simply produce `good numbers'. As we have sermonised throughout this paper, it is also paramount that the results of an analysis be consistent with linguistic realities. Happily, an inspection of our inferred phylogenies reveals that even in unconstrained regions, our analyses are consistent with contemporary linguistic scholarship. For example, the closer relationship of Breton to Cornish than to Welsh is recognised in the phylogenies. Furthermore, Romance subgroups such as the Gallo-Romance (Provencal, Walloon, and French) and Rhaetian languages (Ladin, Romansh, and Friulian) are recognised and form clades in our trees. In general, the inferred MCC trees appear linguistically sound; not only topologically but chronologically; for example the inferred ages of the Latvian-Lithuanian split at between 1000 and 1300 years before present are in close agreement with the academic consenus, which suggests contact with Balto-Finnic and Slavic between the 7th and 10th centuries as an impetus for the schism.\cite{baltic2018}
+
+\begin{figure*}
+    \caption{Analysis A: \textsc{Broad} dataset, constant-population coalescent tree prior, clade and ancestry constraints (MCC tree).}\label{fig:analysisA}
+    \includegraphics[width=\textwidth, center]{runs24-broad-constant}
+\end{figure*}
+
+\begin{figure*}
+    \caption{Analysis B: \textsc{Medium} dataset, constant-population coalescent tree prior, clade and ancestry constraints (MCC tree).}\label{fig:analysisB}
+    \includegraphics[width=\textwidth, center]{runs24-medium-constant}
+\end{figure*}
+
+\begin{figure*}
+    \caption{Analysis C: \textsc{Narrow} dataset, constant-population coalescent tree prior, clade and ancestry constraints (MCC tree).}\label{fig:analysisC}
+    \includegraphics[width=\textwidth, center]{runs24-narrow-constant}
+\end{figure*}
+
+\begin{figure*}
+    \caption{Analysis D: \textsc{Broad} dataset, generalised skyline plot coalescent tree prior, clade and ancestry constraints (MCC tree).}\label{fig:analysisD}
+    \includegraphics[width=\textwidth, center]{runs24-broad-generalised}
+\end{figure*}
+
 
 \subsection{Performance Analysis}
 

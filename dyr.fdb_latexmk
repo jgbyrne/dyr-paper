@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex dyr"] 1650843788 "dyr.aux" "dyr.bbl" "dyr" 1650844684
+["bibtex dyr"] 1650937072 "dyr.aux" "dyr.bbl" "dyr" 1650937099
   "./IEEEtran.bst" 1649954835 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "dyr.aux" 1650844684 6536 0fca977a83d48ddbdcaf77f5ae8e4554 "pdflatex"
-  "dyr.bib" 1649964840 10324 4e9c9fef19c5bc07c8766acd605ffe60 ""
+  "dyr.aux" 1650937099 7523 9c0cf122234bebc7c30e5f024053c5ea "pdflatex"
+  "dyr.bib" 1650934867 10728 c944359e1282b7b0819fda3b54500f59 ""
   (generated)
   "dyr.bbl"
   "dyr.blg"
-["pdflatex"] 1650844684 "dyr.tex" "dyr.pdf" "dyr" 1650844684
+["pdflatex"] 1650937098 "dyr.tex" "dyr.pdf" "dyr" 1650937099
   "/home/jgb/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1648664632 1345251 acb4b6f8ac85315465aa350f046e66e6 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1642002329 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -21,6 +21,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvbc8t.tfm" 1136768653 16004 6e60cc8746f074cea1a1905d84c1cd84 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm" 1136768653 4712 9ef4d7d106579d4b136e1529e1a4533c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm" 1136768653 7040 b2bd27e2bfe6f6948cbc3239cae7444f ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvrc8t.tfm" 1136768653 16152 ab9d47b69dd04cab59fcf780bd0eed36 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvro8r.tfm" 1136768653 4964 f223217e5e1f85fa3742fb0480aba9e8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvro8t.tfm" 1136768653 7292 d408122871055bbc541d7280c154e210 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb7t.tfm" 1136768653 1616 371d1ee60c04b008c8fd760060cd34f1 ""
@@ -77,6 +78,7 @@
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvb8t.vf" 1136768653 2340 0efed6a948c3c37d870e4e7ddb85c7c3 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvbc8t.vf" 1136768653 3612 e9d0fc85037b9bacac690560a2ad3462 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvr8t.vf" 1136768653 2344 44ff28c9ef2fc97180cd884f900fee71 ""
+  "/usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvrc8t.vf" 1136768653 3612 a448b9c1ed57bed50ea118ae6680e645 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvro8t.vf" 1136768653 2348 717f0e01beff9c30c0df4945e471886f ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf" 1136768653 2316 c3899bd8afb459a9a5a9a546bf3029a2 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf" 1136768653 2324 a163806de13ddf37313d2ee968aa0a98 ""
@@ -126,11 +128,15 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1642002331 40136 b05acc85e8425979e52682d98a2bcacf ""
   "/usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1649954662 377441 44770e669a195f417564af1a86582e19 ""
   "IEEEtran.cls" 1649778381 281957 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
-  "dyr.aux" 1650844684 6536 0fca977a83d48ddbdcaf77f5ae8e4554 "pdflatex"
-  "dyr.bbl" 1650843788 4080 29989335c201476ed968fdc7c5c48cec "bibtex dyr"
-  "dyr.tex" 1650844682 76752 20aade9c11288ff7b453fcf8ba1691c6 ""
-  "local.png" 1650803327 13700 74b86d5d05b11ee87b931fe60375cbd8 ""
-  "progdiagram.png" 1650586940 52939 666b003cc03487c048cf6d22f78cb0b2 ""
+  "dyr.aux" 1650937099 7523 9c0cf122234bebc7c30e5f024053c5ea "pdflatex"
+  "dyr.bbl" 1650937072 4368 516260b05d1ebf0aa82997af6e7de783 "bibtex dyr"
+  "dyr.tex" 1650937096 81791 426f596d28f910e7a8e0230fd4465255 ""
+  "figures//local.png" 1650803327 13700 74b86d5d05b11ee87b931fe60375cbd8 ""
+  "figures//progdiagram.png" 1650586940 52939 666b003cc03487c048cf6d22f78cb0b2 ""
+  "figures//runs24-broad-constant.png" 1650932589 158230 ccf18caf7d64dbae3ba1a4ecf62c3f6a ""
+  "figures//runs24-broad-generalised.png" 1650932589 158685 ac31e505240243641dc94e9547ae8066 ""
+  "figures//runs24-medium-constant.png" 1650932588 141022 37b30034350104283af5a5f9813130de ""
+  "figures//runs24-narrow-constant.png" 1650932590 98478 e8b3644766c742bb4f937caa775cca03 ""
   (generated)
   "dyr.aux"
   "dyr.log"
