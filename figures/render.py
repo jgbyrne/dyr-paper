@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import subprocess
 from os import listdir
 
@@ -10,6 +12,9 @@ def main():
         com = ["convert", '../../figures/figs/{}'.format(svg), "{}".format(out_name)]
         print("$ " + " ".join(com))
         subprocess.run(com)
+
+    print("$ cp ../../figures/convergence.png ./")
+    subprocess.run(("cp", "../../figures/convergence.png", "./"))
 
 
 if __name__ == "__main__":

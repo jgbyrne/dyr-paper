@@ -9,6 +9,8 @@
 \usepackage{cite}
 
 \graphicspath{{./figures/}}
+\usepackage{caption}
+\usepackage{subcaption}
 
 \usepackage{amsthm, amsmath, amsfonts}
 \interdisplaylinepenalty=2500
@@ -108,7 +110,7 @@ Both BEAST 2 and MrBayes were originally written with Bioinformaticians as the t
 
 The aim of phylogenetic inference is to learn which phylogenies (dated trees) are most likely given a particular evolutionary model and a set of known data. This is known as the `posterior likelihood'. In a linguistics context, the known data is typically `lexical trait data' -- that is, information about the vocabulary of the languages in question. The evolutionary model, which in Bayesian terms provides our `prior likelihood', encapsulates our beliefs about how likely languages are to diverge and how rapidly their vocabulary changes. To allow our inferred phylogeny to best fit the signal present in the data, we also infer some parameters of our evolutionary model, though these too are subject to their own prior likelihood distributions.
 
-The space of possible parameterisations is very large and it is not typically feasible to derive a // TODO WRONG closed-form expression for the posterior likelihood distribution. However, Bayes' theorem allows us to assess the posterior likelihood of any specific choice of parameterisation given the data. We therefore use a stochastic process called Markov Chain Monte Carlo (MCMC) to iteratively step-through the space of possible parameterisations, with a preference for augmentations to the parameterisation that improve the posterior likelihood. It is provable that the long-run outcome of this process will be to simulate the desired posterior distribution.
+The space of possible parameterisations is very large and it is not typically possible to analytically determine the maxima of the posterior likelihood distribution. Therefore, it is hard to gain an understanding of the shape of the posterior; to discern the regions in paramater space with the highest likelihood density. However, Bayes' theorem allows us to assess the posterior likelihood of any specific choice of parameterisation given the data. We therefore use a stochastic process called Markov Chain Monte Carlo (MCMC) to iteratively step-through the space of possible parameterisations, with a preference for augmentations to the parameterisation that improve the posterior likelihood. It is provable that the long-run outcome of this process will be to  simulate the desired posterior distribution.
 
 \subsection{Lexical Trait Data}
 
@@ -511,44 +513,135 @@ We now show the results of applying \textit{Dyr} to real datasets. We use the sa
 
 We first present our main analyses, using our preferred prior model -- the constant-population coalescent prior with clade and ancestry constraints.
 
+\begin{center}
+    \begin{tabular}{ |c|c|c| }
+    \hline
+    Analysis&Dataset&Root Age\\
+    \hline
+    A&\textsc{Broad}&6008\\
+    B&\textsc{Medium}&7692\\
+    C&\textsc{Narrow}&6309\\
+    \hline
+    \end{tabular}
+\end{center}
+
 Analysis A, which uses the \textsc{Broad} dataset, yields an MCC tree with a root age of 6008 years before present. This root age firmly supports the Steppe hypothesis for the origin of Proto-Indo-European, which is premised on a root age of between 5500 and 6500 years before the present.
 
 Analysis B, which uses the \textsc{Medium} dataset, yields an MCC tree with a root age of 7692 years before present. This root age is harder to intepret, being too old for the standard window of the Steppe hypothesis, but too young for that of the Anatolian hypothesis (between 8000 and 9500 years before present). Our results here are in line with those of Chang et al. and Rama, who both find that the \textsc{Medium} dataset yields substantially older root ages than either the \textsc{Broad} or \textsc{Narrow} datasets.
 
-Analysis C, which uses the \textsc{Narrow} dataset, yields an MCC tree with a root age of 6309 years before present. As with the \textsc{Broad} dataset, this root age is firmly in the domain of the Steppe hypothesis. This analysis is of particular interest as it is directly comparable to analysis A6 of Chang et al., which yielded a root age of 6130 years before present. Clearly these dates are similar, and inspires confidence that our software is functioning correctly. However, they are not the same -- why is this? One reason might be that Chang et al. implement a feature called `ascertainment bias correction', which aims to account for postulated traits which are not observed at any tips. Another reason is of course simply the randomness inherent to the MCMC process -- though one would hope that this would be overcome with the long, highly converged chains that both our analyses used. Finally, the possibility of course exists that subtle bugs or differences in how our software implements various parts of the MCMC process have affected the results. If this is the case, though, the impact does not seem to be too dramatic.
+Analysis C, which uses the \textsc{Narrow} dataset, yields an MCC tree with a root age of 6309 years before present. As with the \textsc{Broad} dataset, this root age is firmly in the domain of the Steppe hypothesis. This analysis is of particular interest as it is directly comparable to analysis A6 of Chang et al., which yielded a root age of 6130 years before present. Clearly these dates are similar, and inspires confidence that our software is functioning correctly. However, they are not the same -- why is this? One reason might be that Chang et al. implement a feature called `ascertainment bias correction', which aims to account for postulated traits which are not observed at any tips. Another reason is of course simply the randomness inherent to any finite stochastic process -- though this should be fairly minimal in the long, highly converged chains that both our analyses used. Finally, the possibility of course exists that subtle bugs or differences in how our software implements various parts of the MCMC process have affected the results. If this is the case, though, the impact does not seem to be too dramatic.
 
 To further investigate the correlation between the results of our software and those obtained by Chang et. al, we tried to replicate their analysis A3, which employs the \textsc{Broad} dataset and the generalised skyline plot tree prior with $5$ generalised intervals. Their analysis yielded a root age of 5950 before present, while ours was just slightly older at 6022 -- not significantly different from our equivalent result with the constant-population prior, in fact. This result furthers our confidence in the reliability of \textit{Dyr} and in its capability on real-world phylolinguistic tasks.
 
 Of course, it is not sufficient for our software to simply produce `good numbers'. As we have sermonised throughout this paper, it is also paramount that the results of an analysis be consistent with linguistic realities. Happily, an inspection of our inferred phylogenies reveals that even in unconstrained regions, our analyses are consistent with contemporary linguistic scholarship. For example, the closer relationship of Breton to Cornish than to Welsh is recognised in the phylogenies. Furthermore, Romance subgroups such as the Gallo-Romance (Provencal, Walloon, and French) and Rhaetian languages (Ladin, Romansh, and Friulian) are recognised and form clades in our trees. In general, the inferred MCC trees appear linguistically sound; not only topologically but chronologically; for example the inferred ages of the Latvian-Lithuanian split at between 1000 and 1300 years before present are in close agreement with the academic consenus, which suggests contact with Balto-Finnic and Slavic between the 7th and 10th centuries as an impetus for the schism.\cite{baltic2018}
 
+
+\subsection{Convergence}
+
+For an MCMC system to be reliable and efficient, it is important that it consistently reaches the desired stationary distribution from an arbitrary starting point in parameter space. This can be investigated by means of a convergence graph. We present such a graph in Fig. \ref{fig:convergence}, which shows how the log posterior likelihood approaches zero in the early stages (i.e. the `burn-in') of an MCMC run.
+
+The plateaus visible in the convergence graph are not, as one might perhaps expect, the algorithm getting stuck in local minima, but rather instances where the algorithm has not yet `solved' constraints. As has been discussed, constraints are implemented (slightly inelegantly) as large penalties on log prior likelihood. When the MCMC process `solves' a constraint, this penalty is lifted, the effect of which is sufficient to ensure that it is practically impossible for the constraint to ever be broken by a subsequent move.
+
+In Fig. \ref{fig:convtrees}, we present four phylogenies selected from various points in the MCMC run depicted in Fig. \ref{fig:convergence}. Recall that the initial topology of the tree is almost completely random -- the only concession to optimality made is that it is chosen to satisfy tip calibrations, to ensure the phylogeny has non-zero prior likelihood.
+
+In the first phylogeny depicted in Fig. \ref{fig:convtrees}, the algorithm has only taken $9,999$ steps, and it can be seen that it is still very far from optimal, having taken just begun its walk towards the desired stationary distribution. See how the Celtic and Gothic language families are interleaved, and at such oddities as Irish and Romanian appearing mixed in with the Indo-Aryan languages.
+
+In the second tree, at step $19,999$, the algorithm has clearly progressed, and is much closer to having reached a `sensible' topology. However, some glaring erorrs still remain, such as Avestan being more closely related to the Indo-Aryan languages than Vedic Sanskrit, and the Greek and Armenian clades remaining interwoven.
+
+By the third phylogeny, at step $599,999$, the algorithm has solved all-but-one of the constraints, with the only exception being the ancestry constraint on Old Irish. This constraint penalty accounts for the final plateau in the convergence graph. In general, though, this phylogeny is looking quite plausible, with only a few oddities, such as Faroese being grouped closer with Norwegian than Icelandic. This might be a sign that the algorithm is still a little way off convergence, or equally plausibly is simply stochastic noise. The reader may also note the surprisingly old root age of this phylogeny; this too is probably largely a consequence of the randomness inherent to the stochastic process, but perhaps in part is due to the un-solved Celtic clade slowing the evolution rate via the `jogging' effect.
+
+The final snapshot, from step $999,999$, satisfies all constraints, and is a perfectly plausible candidate as an Indo-European phylogeny. We note that the algorithm has properly inferred near-zero length branches for all our specified ancestral taxa. By inspection of this tree, and also by reference to the convergence graph, we can deem this phylogeny to be drawn from the posterior likelihood distribution. At this point, in a full analysis, it would be proper to start taking snapshots from which to build the final MCC tree.
+
+\begin{figure}
+\caption{Convergence on constrained \textsc{Narrow} dataset}\label{fig:convergence}
+\includegraphics[width=8cm,center]{convergence}
+\end{figure}
+
 \begin{figure*}
-    \caption{Analysis A: \textsc{Broad} dataset, constant-population coalescent tree prior, clade and ancestry constraints (MCC tree).}\label{fig:analysisA}
+    \caption{Analysis A: \textsc{Broad}, constant-population coalescent prior, clade+ancestry constraints, 48M steps (MCC tree).}\label{fig:analysisA}
     \includegraphics[width=\textwidth, center]{runs24-broad-constant}
 \end{figure*}
 
 \begin{figure*}
-    \caption{Analysis B: \textsc{Medium} dataset, constant-population coalescent tree prior, clade and ancestry constraints (MCC tree).}\label{fig:analysisB}
+    \caption{Analysis B: \textsc{Medium}, constant-population coalescent prior, clade+ancestry constraints, 48M steps (MCC tree).}\label{fig:analysisB}
     \includegraphics[width=\textwidth, center]{runs24-medium-constant}
 \end{figure*}
 
 \begin{figure*}
-    \caption{Analysis C: \textsc{Narrow} dataset, constant-population coalescent tree prior, clade and ancestry constraints (MCC tree).}\label{fig:analysisC}
+    \caption{Analysis C: \textsc{Narrow}, constant-population coalescent prior, clade+ancestry constraints, 96M steps (MCC tree).}\label{fig:analysisC}
     \includegraphics[width=\textwidth, center]{runs24-narrow-constant}
 \end{figure*}
 
+
+%\begin{figure*}
+%    \caption{Analysis D: \textsc{Broad}, generalised skyline plot coalescent prior, clade+ancestry %constraints, 48M steps (MCC tree).}\label{fig:analysisD}
+%    \includegraphics[width=\textwidth, center]{runs24-broad-generalised}
+%\end{figure*}
+
+
 \begin{figure*}
-    \caption{Analysis D: \textsc{Broad} dataset, generalised skyline plot coalescent tree prior, clade and ancestry constraints (MCC tree).}\label{fig:analysisD}
-    \includegraphics[width=\textwidth, center]{runs24-broad-generalised}
+     \centering
+     \begin{subfigure}[b]{0.4\paperwidth}
+         \centering
+         \caption{Phylogeny after 9,999 steps}
+         \includegraphics[width=\textwidth]{runs26-conv1}
+         \label{fig:y equals x}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.4\paperwidth}
+         \centering
+         \caption{Phylogeny after 199,999 steps}
+         \includegraphics[width=\textwidth]{runs26-conv2}
+         \label{fig:three sin x}
+     \end{subfigure}
+     \newline
+     \begin{subfigure}[b]{0.4\paperwidth}
+         \centering
+         \caption{Phylogeny after 599,999 steps}
+         \includegraphics[width=\textwidth]{runs26-conv3}
+         \label{fig:five over x}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.4\paperwidth}
+         \centering
+         \caption{Phylogeny after 999,999 steps}
+         \includegraphics[width=\textwidth]{runs26-conv4}
+         \label{fig:five over x}
+     \end{subfigure}
+     \caption{Convergence towards the stationary distribution with the \textsc{Narrow} dataset}
+     \label{fig:convtrees}
 \end{figure*}
 
-
 \subsection{Performance Analysis}
+
+To investigate how implementation decisions impacted the performance of our software, we designed a benchmark test case. Our test case employs the \textsc{Narrow} dataset and the constant-population coalescent tree prior, with a chain length of 6 million steps, with tree snapshots taken after a burn-in period of 3 million steps.
+
+In particular, we sought to determine the effectiveness of two specific optimisations. The first optimisation was our implementation of Damage-tracking, a system by which MCMC moves are able to inform the marginal likelihood logic which parts of the paramaterisation are affected by their choice of augmentation. The second optimisation was the usage of the BEAGLE library's CUDA backend, which allows marginal likelihood calculations to be performed in a highly parallel manner on an GPU.
+
+We tested four software comfigurations, changing two variables: the BEAGLE platform, which was either the CPU backend or the GPU-accelerated CUDA backend; and the presence or absence of Damage-tracking. The test with CUDA and Damage-tracking corresponds to the configuration used in our main analyses.\footnote{CPU analyses were performed on the author's desktop computer, with an Intel i5-3570K processor running at 3.8 GHz. GPU analyses were performed on the Durham University NVIDIA CUDA Centre (NCC) cluster. NCC has been purchased through Durham University's strategic investment funds, and is installed and maintained by the Department of Computer Science.}
+
+\begin{center}
+
+\begin{tabular}{ |c|c|c| }
+    \hline
+    Platform & Damage & Runtime (mins) \\
+    \hline
+    CPU& Damage & 264 \\
+    CPU& No Damage & 516 \\
+    CUDA& Damage & 44 \\
+    CUDA& No Damage & 82 \\
+    \hline
+\end{tabular}
+
+\end{center}
+
+The improvement gained by employing Damage-tracking is nearly a halving in runtime, a speedup which would likely be even higher on larger datasets. Meanwhile, the advantage of the CUDA backend over the CPU is even greater, providing a six-times speedup.
+
+From these data it is evident that both Damage-tracking and the usage of the BEAGLE CUDA backend are significant performance optimisations that justify the extra effort in implementing the former, and in integrating the latter. In fact, these optimisations are so signficant that were it not for their combined speedups it would have made it difficult to perform the large analyses in this paper given the computational resources available to us.
 
 \section{Evaluation and Future Steps}
 
 \section{Conclusion}
-
-\newpage
 
 \bibliographystyle{ieeetran}
 \bibliography{dyr}

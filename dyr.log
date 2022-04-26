@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.30)  26 APR 2022 02:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.30)  27 APR 2022 00:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -177,6 +177,32 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen178
+\captionmargin@=\dimen179
+\captionwidth=\dimen180
+\caption@tempdima=\dimen181
+\caption@indent=\dimen182
+\caption@parindent=\dimen183
+\caption@hangindent=\dimen184
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEtablestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\normalfont \sffamily \footnotesize #1}\\{\normalfont \sffamily \footnotesize #2}\par \addvspace {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptionsepspace \setbox \@tempboxa \hbox {\normalfont \sffamily \footnotesize {#1.}\nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\normalfont \sffamily \footnotesize {#1.}\nobreakspace }\parbox [t]{\hsize }{\normalfont \sffamily \footnotesize \noindent \unhbox \@tempboxa #2}\else \hbox to\hsize {\normalfont \sffamily \footnotesize \box \@tempboxa \hfil }\fi \fi  on input line 1139.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count197
+\c@continuedfloat=\count198
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+\c@subfigure=\count199
+\c@subtable=\count266
 ) (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks21
@@ -198,44 +224,44 @@ Package: amstext 2000/06/29 v2.01 AMS text
  (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks27
-\ex@=\dimen178
+\ex@=\dimen185
 )) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen179
+\pmbraise@=\dimen186
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count197
+\inf@bad=\count267
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count198
-\leftroot@=\count199
+\uproot@=\count268
+\leftroot@=\count269
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count266
-\DOTSCASE@=\count267
+\classnum@=\count270
+\DOTSCASE@=\count271
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
 \Mathstrutbox@=\box51
 \strutbox@=\box52
-\big@size=\dimen180
+\big@size=\dimen187
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count268
-\c@MaxMatrixCols=\count269
+\macc@depth=\count272
+\c@MaxMatrixCols=\count273
 \dotsspace@=\muskip16
-\c@parentequation=\count270
-\dspbrk@lvl=\count271
+\c@parentequation=\count274
+\dspbrk@lvl=\count275
 \tag@help=\toks28
-\row@=\count272
-\column@=\count273
-\maxfields@=\count274
+\row@=\count276
+\column@=\count277
+\maxfields@=\count278
 \andhelp@=\toks29
-\eqnshift@=\dimen181
-\alignsep@=\dimen182
-\tagshift@=\dimen183
-\tagwidth@=\dimen184
-\totwidth@=\dimen185
-\lineht@=\dimen186
+\eqnshift@=\dimen188
+\alignsep@=\dimen189
+\tagshift@=\dimen190
+\tagwidth@=\dimen191
+\totwidth@=\dimen192
+\lineht@=\dimen193
 \@envbody=\toks30
 \multlinegap=\skip54
 \multlinetaggap=\skip55
@@ -254,17 +280,17 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
  (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@ALC@unique=\count275
-\c@ALC@line=\count276
-\c@ALC@rem=\count277
-\c@ALC@depth=\count278
+\c@ALC@unique=\count279
+\c@ALC@line=\count280
+\c@ALC@rem=\count281
+\c@ALC@depth=\count282
 \ALC@tlm=\skip56
 \algorithmicindent=\skip57
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
-\col@sep=\dimen187
+\col@sep=\dimen194
 \ar@mcellbox=\box53
-\extrarowheight=\dimen188
+\extrarowheight=\dimen195
 \NC@list=\toks32
 \extratabsurround=\skip58
 \backup@length=\skip59
@@ -274,39 +300,46 @@ Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-05-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count279
+\l__color_backend_stack_int=\count283
 \l__pdf_internal_box=\box55
-) (./dyr.aux)
+) (./dyr.aux
+
+LaTeX Warning: Label `fig:five over x' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:five over x' multiply defined.
+
+)
 \openout1 = `dyr.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 
 -- Lines per column: 61 (exact).
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count280
-\scratchdimen=\dimen189
+\scratchcounter=\count284
+\scratchdimen=\dimen196
 \scratchbox=\box56
-\nofMPsegments=\count281
-\nofMParguments=\count282
+\nofMPsegments=\count285
+\nofMParguments=\count286
 \everyMPshowfont=\toks33
-\MPscratchCnt=\count283
-\MPscratchDim=\dimen190
-\MPnumerator=\count284
-\makeMPintoPDFobject=\count285
+\MPscratchCnt=\count287
+\MPscratchDim=\dimen197
+\MPnumerator=\count288
+\makeMPintoPDFobject=\count289
 \everyMPtoPDFconversion=\toks34
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -314,27 +347,29 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 45.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 47.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
-LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 45.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+pzd on input line 45.
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 47.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/upzd.fd
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
 )
-LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 51.
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 51.
+LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 53.
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 53.
 
-Underfull \hbox (badness 1859) in paragraph at lines 59--60
+Underfull \hbox (badness 1859) in paragraph at lines 61--62
 \T1/ppl/m/n/9.53561 method to anal-yse lan-guage fam-i-lies in gen-eral and
  []
 
@@ -393,42 +428,40 @@ pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/upd
 
 
 ] [2]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 115.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 117.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) [3]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9.53561> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 144.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 146.
  [4] [5] [6] [7]
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8.03> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 334.
 <./figures//progdiagram.png, id=44, 715.67375pt x 322.20375pt>
 File: ./figures//progdiagram.png Graphic file (type png)
 <use ./figures//progdiagram.png>
-Package pdftex.def Info: ./figures//progdiagram.png  used on input line 336.
+Package pdftex.def Info: ./figures//progdiagram.png  used on input line 338.
 (pdftex.def)             Requested size: 256.0748pt x 115.2853pt.
 
-Underfull \hbox (badness 4291) in paragraph at lines 343--344
+Underfull \hbox (badness 4291) in paragraph at lines 345--346
 []\T1/ppl/m/n/9.53561 The pro-gram now en-ters the main-loop of the
  []
 
 [8 <./figures//progdiagram.png>]
-Underfull \hbox (badness 3354) in paragraph at lines 376--377
+Underfull \hbox (badness 3354) in paragraph at lines 378--379
 \T1/ppl/m/n/9.53561 in log prior like-li-hood, which is the log-likelihood
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--396
+Underfull \hbox (badness 10000) in paragraph at lines 397--398
 []\T1/ppl/m/n/9.53561 The third ab-strac-tion layer is pro-vided by
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--396
+Underfull \hbox (badness 10000) in paragraph at lines 397--398
 \T1/pcr/m/n/9.53561 libhmsbeagle-rs\T1/ppl/m/n/9.53561 , which con-sumes the in-ter-face
  []
 
 
-Underfull \hbox (badness 2608) in paragraph at lines 399--400
+Underfull \hbox (badness 2608) in paragraph at lines 401--402
 []\T1/ppl/m/n/9.53561 However, the most pow-er-ful ab-strac-tion that the
  []
 
@@ -436,43 +469,75 @@ Underfull \hbox (badness 2608) in paragraph at lines 399--400
 <./figures//local.png, id=56, 227.85126pt x 246.9225pt>
 File: ./figures//local.png Graphic file (type png)
 <use ./figures//local.png>
-Package pdftex.def Info: ./figures//local.png  used on input line 479.
+Package pdftex.def Info: ./figures//local.png  used on input line 481.
 (pdftex.def)             Requested size: 113.81102pt x 123.34036pt.
  [11] [12 <./figures//local.png>]
-<./figures//runs24-broad-constant.png, id=64, 752.8125pt x 865.73438pt>
+<./figures//convergence.png, id=64, 409.48183pt x 322.61328pt>
+File: ./figures//convergence.png Graphic file (type png)
+<use ./figures//convergence.png>
+Package pdftex.def Info: ./figures//convergence.png  used on input line 557.
+(pdftex.def)             Requested size: 227.62204pt x 179.338pt.
+<./figures//runs24-broad-constant.png, id=65, 752.8125pt x 865.73438pt>
 File: ./figures//runs24-broad-constant.png Graphic file (type png)
 <use ./figures//runs24-broad-constant.png>
-Package pdftex.def Info: ./figures//runs24-broad-constant.png  used on input line 526.
+Package pdftex.def Info: ./figures//runs24-broad-constant.png  used on input line 562.
 (pdftex.def)             Requested size: 517.935pt x 595.66649pt.
-<./figures//runs24-medium-constant.png, id=65, 752.8125pt x 790.45313pt>
+<./figures//runs24-medium-constant.png, id=66, 752.8125pt x 790.45313pt>
 File: ./figures//runs24-medium-constant.png Graphic file (type png)
 <use ./figures//runs24-medium-constant.png>
-Package pdftex.def Info: ./figures//runs24-medium-constant.png  used on input line 531.
+Package pdftex.def Info: ./figures//runs24-medium-constant.png  used on input line 567.
 (pdftex.def)             Requested size: 517.935pt x 543.86938pt.
-<./figures//runs24-narrow-constant.png, id=66, 752.8125pt x 526.96875pt>
+<./figures//runs24-narrow-constant.png, id=67, 752.8125pt x 526.96875pt>
 File: ./figures//runs24-narrow-constant.png Graphic file (type png)
 <use ./figures//runs24-narrow-constant.png>
-Package pdftex.def Info: ./figures//runs24-narrow-constant.png  used on input line 536.
+Package pdftex.def Info: ./figures//runs24-narrow-constant.png  used on input line 572.
 (pdftex.def)             Requested size: 517.935pt x 362.57959pt.
-<./figures//runs24-broad-generalised.png, id=67, 752.8125pt x 865.73438pt>
-File: ./figures//runs24-broad-generalised.png Graphic file (type png)
-<use ./figures//runs24-broad-generalised.png>
-Package pdftex.def Info: ./figures//runs24-broad-generalised.png  used on input line 541.
-(pdftex.def)             Requested size: 517.935pt x 595.66649pt.
- (./dyr.bbl) [13] [14 <./figures//runs24-broad-constant.png>] [15 <./figures//runs24-medium-constant.png>] [16 <./figures//runs24-narrow-constant.png>] [17 <./figures//runs24-broad-generalised.png>] (./dyr.aux) ) 
+<./figures//runs26-conv1.png, id=68, 451.6875pt x 526.96875pt>
+File: ./figures//runs26-conv1.png Graphic file (type png)
+<use ./figures//runs26-conv1.png>
+Package pdftex.def Info: ./figures//runs26-conv1.png  used on input line 587.
+(pdftex.def)             Requested size: 245.71425pt x 286.67363pt.
+<./figures//runs26-conv2.png, id=69, 451.6875pt x 526.96875pt>
+File: ./figures//runs26-conv2.png Graphic file (type png)
+<use ./figures//runs26-conv2.png>
+Package pdftex.def Info: ./figures//runs26-conv2.png  used on input line 594.
+(pdftex.def)             Requested size: 245.71425pt x 286.67363pt.
+<./figures//runs26-conv3.png, id=70, 451.6875pt x 526.96875pt>
+File: ./figures//runs26-conv3.png Graphic file (type png)
+<use ./figures//runs26-conv3.png>
+Package pdftex.def Info: ./figures//runs26-conv3.png  used on input line 601.
+(pdftex.def)             Requested size: 245.71425pt x 286.67363pt.
+<./figures//runs26-conv4.png, id=71, 451.6875pt x 526.96875pt>
+File: ./figures//runs26-conv4.png Graphic file (type png)
+<use ./figures//runs26-conv4.png>
+Package pdftex.def Info: ./figures//runs26-conv4.png  used on input line 608.
+(pdftex.def)             Requested size: 245.71425pt x 286.67363pt.
+ [13]
+Underfull \hbox (badness 3148) in paragraph at lines 638--639
+[]\T1/ppl/m/n/9.53561 The im-prove-ment gained by em-ploy-ing Damage-
+ []
+
+(./dyr.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+) [14 <./figures//convergence.png>] [15 <./figures//runs24-broad-constant.png>] [16 <./figures//runs24-medium-constant.png>] [17 <./figures//runs24-narrow-constant.png>] [18 <./figures//runs26-conv1.png> <./figures//runs26-conv2.png> <./figures//runs26-conv3.png> <./figures//runs26-conv4.png>] (./dyr.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4872 strings out of 480806
- 76097 string characters out of 5905151
- 386446 words of memory out of 6000000
- 22144 multiletter control sequences out of 15000+600000
- 519278 words of font info for 190 fonts, out of 8000000 for 9000
+ 6240 strings out of 480806
+ 102592 string characters out of 5905151
+ 407129 words of memory out of 6000000
+ 23506 multiletter control sequences out of 15000+600000
+ 511769 words of font info for 187 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 55i,16n,62p,1518b,358s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,16n,117p,1518b,511s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rep-cmsc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rep-cmrm.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on dyr.pdf (17 pages, 719993 bytes).
+Output written on dyr.pdf (18 pages, 931492 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
+ 166 PDF objects out of 1000 (max. 8388607)
+ 105 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
