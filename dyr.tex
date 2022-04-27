@@ -9,7 +9,6 @@
 \usepackage{cite}
 
 \graphicspath{{./figures/}}
-\usepackage{caption}
 \usepackage{subcaption}
 
 \usepackage{amsthm, amsmath, amsfonts}
@@ -37,7 +36,7 @@ Board of Examiners in the Department of Computer Sciences, Durham University
 
 \IEEEtitleabstractindextext{%
 \begin{abstract}
-    Bayesian statistics provide a powerful framework for inferring the evolutionary history of language families from lexical data, a problem which is made computationally tractable by Markov Chain Monte Carlo (MCMC) algorithms. We present Dyr, a simple yet capable new system for Bayesian inference, and use it to perform novel state-of-the-art analyses of the Indo-European language family. 
+Bayesian statistics provide a powerful framework for inferring the evolutionary history of language families from lexical data, a problem which is made computationally tractable by Markov Chain Monte Carlo (MCMC) algorithms. We present Dyr, a simple yet capable new system for Bayesian inference, and use it to perform novel state-of-the-art analyses of the Indo-European language family. 
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -56,13 +55,13 @@ Scholars have noticed similarities between languages for millenia. In the 18\ts{
 
 Historically, constructing phylogenies has been a job for humans, being based on the judgement of expert scholars with deep knowledge of languages ancient and modern. Although fruitful, this approach is naturally susceptible to human biases and oversights. It also provides no way to determine the age of unattested ancestor languages other than the (admittedly finely-honed) intuition of learned intellectuals.
 
-The problem of ancestral dating is of particular relevance to Indo-European, the largest and most studied language family in the world. Encompassing nearly all of the languages of Europe and a great many in Western Asia and India, the challenge of reconstructing the history of this vast grouping has captivated comparative linguists since the advent of the discipline. And yet, one central question is yet to be conclusively answered: where and when was Proto-Indo-European (PIE; the ancestor of all Indo-European languages) originally spoken? Two main theories abound. The first, known as the `Kurgan' hypothesis, postulates an \textit{Urheimat} (original homeland) in the Pontic-Caspian steppe north of the Black Sea\cite{gimbutas1974gods}.\footnote{A \textit{kurgan} is a tumulus or burial mound. This theory is associates the spread of Indo-European with warlike tumulus-building charioteers.} Conversely, the second proposes an origin in Anatolia\cite{renfrew2001anatolian}.\footnote{This rather more sedate theory suggests a gradual proliferation of Indo-European in tandem with the spread of agriculture} The crucial difference between the two theories is that while the former ascribes a time depth of 6000 years to PIE, the latter hinges on it being considerably more ancient, at approximately 8500 years old. A reliable estimate for the age of PIE - that is, the root age of the Indo-European language tree - could therefore be potent evidence for one theory over the other.
+The problem of ancestral dating is of particular relevance to Indo-European, the largest and most studied language family in the world. Encompassing nearly all of the languages of Europe and a great many in Western Asia and India, the challenge of reconstructing the history of this vast grouping has captivated comparative linguists since the advent of the discipline. And yet, one central question is still to be conclusively answered: where and when was Proto-Indo-European (PIE; the ancestor of all Indo-European languages) originally spoken? Two main theories abound. The first, known as the `Kurgan' hypothesis, postulates an \textit{Urheimat} (original homeland) in the Pontic-Caspian steppe north of the Black Sea\cite{gimbutas1974gods}.\footnote{A \textit{kurgan} is a tumulus or burial mound. This theory is associates the spread of Indo-European with warlike tumulus-building charioteers.} Conversely, the second proposes an origin in Anatolia\cite{renfrew2001anatolian}.\footnote{This rather more sedate theory suggests a gradual proliferation of Indo-European in tandem with the spread of agriculture} The crucial difference between the two theories is that while the former ascribes a time depth of 6000 years to PIE, the latter hinges on it being considerably more ancient, at approximately 8500 years old. A reliable estimate for the age of PIE - that is, the root age of the Indo-European language tree - could therefore be potent evidence for one theory over the other.
 
 Since the millenium, researchers have adopted a new method to analyse language families in general and Indo-European in particular -- Bayesian inference. By re-appropriating software designed to analyse genetic data and construct biological evolutionary trees, they have successfully inferred plausible dated phylogenies from large vocabulary databases. Such research feels tantalisingly close to an objective solution to linguistic enigmas such as that of Indo-European provenance.
 
-However, in reality, the human factor still plays a role. Bayesian inference requires the specification of prior distributions, the choice of which can radically affect the results of the computation. For research to be rigorous and reliable, priors should be chosen carefully and properly justified.
+However, in reality, the human factor still plays a role. Bayesian methods require the specification of prior distributions, the choice of which can radically affect the results of the inference. For research to be rigorous and reliable, priors should be chosen carefully and properly justified.
 
-Yet much study in the relatively small field of `Bayesian Phylolinguistics' falls short of this mark. Priors are often chosen seemingly out of habit or convention. Such laxness poses particular danger when these conventions have their origins in bioinformatics; a model which is sensible in the context of biological evolution may not be so logical when applied to languages.
+Yet much study in the relatively small field of `Bayesian Phylolinguistics' falls short of this mark. Priors are often chosen seemingly out of habit or convention. Such laxness poses particular dangers when these conventions have their origins in bioinformatics; a model which is sensible in the context of biological evolution may not be so logical when applied to languages.
 
 We suggest that one reason for this tendency is the continued reliance on large, featureful bioinformatics software packages like BEAST2 and MrBayes. Any dedicated support for linguistics in these programs tends to be something of an afterthought, and their intimidating size makes them hard to understand in their totality. Therefore, we submit that to step out of the shadow of the older, larger discipline, it is desirable for Bayesian phylolinguistics to have its own dedicated software package.
 
@@ -70,25 +69,31 @@ The objective of our research was to build such a software package. Our key aims
 
 We thus present \textit{Dyr}, a new program for Bayesian inference of linguistic phylogenies. Small enough that its source code may be read and understood in a day, and offering only the features required for linguistic analysis, \textit{Dyr} is nonetheless built to be flexible and extensible. 
 
-In this paper we will demonstrate how we have engineered \textit{Dyr} to be efficient and extensible using modern programming techniques, how we have implemented a range of key features, and how we have applied \textit{Dyr} to produce our own state-of-the-art analyses on the benchmark Indo-European problem domain.
+In section \ref{sec:related} of this paper we will describe the research that has led up to the contemporary understanding and usage of Bayesian phylogenetic inference, and in particular its application to Indo-European. We will also discuss existing inference software. In section \ref{sec:methods} we will describe the theoretical principles underpinning Bayesian inference in general and \textit{Dyr} in particular. We will also discuss the suitability of particular prior models to phylolinguistic research, and justify our own choice of model. 
 
-Our hope and intention is that going forward, \textit{Dyr} can serve as a worthy platform for trialling novel phylogenetic methods with direct linguistic inspiration, application, and justification.
+This theoretical grounding will then be built upon in section \ref{sec:implementation}, where we discuss the structure of the \textit{Dyr} system. We describe the techniques we used to faithfully implement our theoretical models, while at the same time achieving our technical goals of simplicity, efficiency, and extensibility.
 
-\section{Related Work}
+In section \ref{sec:results}, we present the results of our application of \textit{Dyr} to the benchmark Indo-European problem domain. We demonstrate the reliability of our software by showing that it produces similar results to Chang et. al when performing similar analyses. We also perform our own novel analyses, using our favoured prior model from \ref{sec:methods}. Based on the results of these analyses, we conclude that the Steppe hypothesis for the Indo-European \textit{Urheimat} is the most plausible, re-affirming the results of Chang et. al.   
 
-The most general statement of the problem that our work seeks to solve, and indeed that the entire field of Computational Phylogenetics is broadly centered around, is as follows: find the tree or distribution of trees that best matches a given dataset, for some definition of `best match'.
+Finally, in section \ref{sec:conclusion}, we summarise and reflect upon the outcomes of our work and re-iterate our hope that going forward, \textit{Dyr} can serve as a worthy platform for trialling novel phylogenetic methods with direct linguistic justification and application.
+
+\section{Related Work}\label{sec:related}
+
+The most general description of the problem that our work seeks to solve, and indeed that the entire field of Computational Phylogenetics is broadly centered around, is that it is the task of finding the tree or distribution of trees that best fits a given dataset, for some definition of `best fit'.
 
 However, for as long as researchers have tried to tackle this problem with computational methods, they have quickly run up against firm combinatorical realities. The number of possible topologies - not even considering branch lengths - for a rooted binary tree with 52 leaves, the smallest size of tree we consider in our analyses, is on the order of $10^{80}$.\cite{felsenstein2004inferring}
 
 One widely-used approach for optimising phylogenetic trees from genetic data has historically been the criterion of maximum parsimony; searching for the tree that minimises the number of mutations for a set of data. However, besides being an extremely hard search problem, this approach was criticised for ineffectively modelling evolutionary realities.
 
-An alternative approach is to use a likelihood model that describes a probability distribution over the space of possible trees. This approach has some noted advantages, not least that it allows the application of techniques such as the `relaxed clock', which allows evolutionary rates to vary.
+An alternative method is to use a likelihood model that describes a probability distribution over the space of possible trees. This approach has some noted advantages, not least that it allows the application of techniques such as the `relaxed clock', which allows evolutionary rates to vary.
 
-The first work to combine likelihood models for phylogenetics with Monte Carlo Markov Chain (MCMC) algorithms was done in the 1990s, when hardware advances bought the technique into the realms of feasibility. However, the Metropolis algorithm which underlies these efforts dates to the 1950s, while Hastings' generalised variant dates to 1970.
+A likelihood model is of little use without some way of sampling the probability distribution it implies; it is for this purpose that the family of algorithms known as Monte Carlo Markov Chain, or MCMC, was devised. The foundational work in this field was the creation of the Metropolis algorithm in the 1950s, which was later generalised by Hastings in 1970. However, the first application of MCMC to phylogenetics came later, in the 1990s, when hardware advances made the technique feasible for larger parameter spaces.
 
-The elegant feature that makes MCMC processes so attractive is their asymptoptic convergence on a defined stationary distribution over a parameter space. However, this convergence can be extremely slow if the proposal distribution is misconfigured; a tendency to take both steps that are too small and too large can bring convergence grinding to a halt. Tuning the proposal distribution to achieve consistent and rapid convergence can in practice be more of an art than a science.
+The elegant property that makes MCMC processes so attractive is their asymptoptic convergence on a defined stationary distribution over a parameter space. However, this convergence can be extremely slow if the proposal distribution is misconfigured; a tendency to take both steps that are too small and too large can bring convergence grinding to a halt. Tuning the proposal distribution to achieve consistent and rapid convergence can in practice be more of an art than a science.
 
-Nonetheless, the fact that MCMC approximates a probability distribution and not just a maxima is a key advantage over traditional heuristic search. For example, the Maximum Clade Credibility approach yields a tree that is not simply a maximal point in the parameter space, but rather one whose topology is strongly supported by a relatively large volume of probability density.
+Nonetheless, the fact that MCMC approximates a probability distribution and doesn't simply find a maxmima is a key advantage over traditional heuristic search. One can take `snapshots' from a chain during its execution and use them afterwards to create `summary' phylogenies, which combine the median values of various parameters to yield a candidate phylogeny that better represents the distribution than a simple maxima.
+
+For example, the Maximum Clade Credibility (MCC) technique, which we use to surmise our analyses, is attractive since it yields a tree whose topology is strongly supported by a relatively large volume of probability density.
 
 \subsection{Inferring Linguistic Phylogenies}
 
@@ -106,7 +111,7 @@ Bayesian phylogenetic inference is dominated by two large software packages, MrB
 
 Both BEAST 2 and MrBayes were originally written with Bioinformaticians as the target users; to my knowledge \textit{Dyr} is the first Bayesian inference package designed from the ground-up with phylolinguistics as the primary use-case. \textit{Dyr} follows the lead of both these software packages by using the BEAGLE3 library for hardware-accelerated computation of likelihoods.\cite{ayres2019beagle}
 
-\section{Methods}
+\section{Methods}\label{sec:methods}
 
 The aim of phylogenetic inference is to learn which phylogenies (dated trees) are most likely given a particular evolutionary model and a set of known data. This is known as the `posterior likelihood'. In a linguistics context, the known data is typically `lexical trait data' -- that is, information about the vocabulary of the languages in question. The evolutionary model, which in Bayesian terms provides our `prior likelihood', encapsulates our beliefs about how likely languages are to diverge and how rapidly their vocabulary changes. To allow our inferred phylogeny to best fit the signal present in the data, we also infer some parameters of our evolutionary model, though these too are subject to their own prior likelihood distributions.
 
@@ -317,7 +322,7 @@ The core of the function $acc(\Gamma, \Gamma^*)$ is the multiplication of two ra
 
 Excepting the vanishingly unlikely scenario that the initial state $\Gamma_0$ is close to the global likelihood maxima, we can be certain that the initial states of the chain will not be a good approximation for the posterior distribution. Therefore, in our analyses, we discard them, instead sampling from the latter part of the chain. Formally speaking, the bias induced by the initial state is never wholly eliminated, but with a good MCMC implementation it becomes negligable.
 
-\section{Implementation}
+\section{Implementation}\label{sec:implementation}
 
 In implementing \textit{Dyr}, we sought to build a software system that was high-performance, elegantly designed, and easily extensible.
 
@@ -507,7 +512,7 @@ Each of these rate-related parameters has an associated MCMC move. In each case,
 
 The final move is the $\pi_1$ move. Recall that $\pi_1$, the stationary frequency of trait-presence, may vary between $0$ and $1$. It has a uniform prior, so excepting cases where the proposed value -- again drawn from a narrow Normal distribution -- is out-of-bounds, there is no change in log prior likelihood. As with all global substitution model parameters, changing this value causes `full damage' to the tree and thus all transition matrices and prior buffers must be recalculated.
 
-\section{Results and Analysis}
+\section{Results and Analysis}\label{sec:results}
 
 We now show the results of applying \textit{Dyr} to real datasets. We use the same curated \textsc{Narrow}, \textsc{Medium}, and \textsc{Broad} subsets of the IELEX Indo-European lexical trait database as Chang et al. and Rama.
 
@@ -586,28 +591,28 @@ The final snapshot, from step $999,999$, satisfies all constraints, and is a per
          \centering
          \caption{Phylogeny after 9,999 steps}
          \includegraphics[width=\textwidth]{runs26-conv1}
-         \label{fig:y equals x}
+         \label{fig:convtree1}
      \end{subfigure}
      \hfill
      \begin{subfigure}[b]{0.4\paperwidth}
          \centering
          \caption{Phylogeny after 199,999 steps}
          \includegraphics[width=\textwidth]{runs26-conv2}
-         \label{fig:three sin x}
+         \label{fig:convtree2}
      \end{subfigure}
      \newline
      \begin{subfigure}[b]{0.4\paperwidth}
          \centering
          \caption{Phylogeny after 599,999 steps}
          \includegraphics[width=\textwidth]{runs26-conv3}
-         \label{fig:five over x}
+         \label{fig:convtree3}
      \end{subfigure}
      \hfill
      \begin{subfigure}[b]{0.4\paperwidth}
          \centering
          \caption{Phylogeny after 999,999 steps}
          \includegraphics[width=\textwidth]{runs26-conv4}
-         \label{fig:five over x}
+         \label{fig:convtree4}
      \end{subfigure}
      \caption{Convergence towards the stationary distribution with the \textsc{Narrow} dataset}
      \label{fig:convtrees}
@@ -657,13 +662,13 @@ Next, the programmer should add a corresponding case for the novel prior in the 
 
 Next, the programmer must add implementations for some specific functions relating to the tree prior. They need add a case to \texttt{TreePrior::draw()}, which selects an initial parameterisation at random from the pre-configured prior distributions. And naturally, they need also add a case to \texttt{TreePrior::log\_prior\_likelihood()}, which determines the log prior likelihood of a particular parameterisation under a particular tree prior model.
 
-The programmer must create additional MCMC moves to suggest adjustments to the parameters of the novel prior. Creating a new move is as simple as defining a new heap-allocated type that implements the trait \texttt{Move} - i.e. has a function \texttt{make\_move} that accepts the current \texttt{Parameters} and mutates it, returning a \textt{MoveResult}. Then, all that remains to do within \texttt{fitzroy} is to add a small piece of logic in \texttt{Configuration::get\_moves()} so that the proposal distribution includes these moves in the case of a run being configured with the novel prior.
+The programmer must create additional MCMC moves to suggest adjustments to the parameters of the novel prior. Creating a new move is as simple as defining a new heap-allocated type that implements the trait \texttt{Move} - i.e. has a function \texttt{make\_move} that accepts the current \texttt{Parameters} and mutates it, returning a \texttt{MoveResult}. Then, all that remains to do within \texttt{fitzroy} is to add a small piece of logic in \texttt{Configuration::get\_moves()} so that the proposal distribution includes these moves in the case of a run being configured with the novel prior.
 
 Finally, the programmer should make some modest changes to the manifest parser so that the novel prior can be specified within the manifest format.
 
 Provided that the novel tree prior is compatible with the binary-tree model of lingistic divergence, then making these augmentations is sufficient to implement it as a first-class citizen within \textit{Dyr}. We hope it is evident from this exposition that there is little-to-no confusing or tiresome boilerplate required; by-and-large the work required is simply that of implementing the core logic, with the powerful type system and intelligent abstractions handling the rest of the plumbing.
 
-\section{Conclusion}
+\section{Conclusion}\label{sec:conclusion}
 
 In this paper we have taken a whistle-stop tour through the history of comparative linguistics, described the classic problem of the Indo-European \textit{Urheimat}, and outlined the history of MCMC algorithms in general and their application to phylogenetics and phylolinguistics in particular. We have described in detail the principles of every aspect of phylolinguistic inference, discussed the relative importance and merit of different model choices, in particular their reconcilability with linguistic realities.
 
@@ -675,11 +680,11 @@ We have demonstrated that our software has desirable convergence and performance
 
 \subsubsection{Personal Reflections}
 
-The tangible products of any endeavour are, except in cases of great artistry or genius, crude reflections of rather more sublime constructs in the mind of the practicioner. So it goes with this project. Pleased as I am with the software I have written, I reserve the larger part of my satisfaction for the deep understanding I have gained for how complex phylogenetic inference systems operate.
+The tangible products of any endeavour are, except in cases of great artistry or genius, crude reflections of rather more sublime constructs in the mind of the practicioner. So it goes with this project. Pleased as I am with the software I have written, I am more satisfied still with the deep understanding I have gained for how complex phylogenetic inference systems operate.
 
 Although they are, in point of fact, wholly mathematical entities, such systems are in character very mechanical; one can almost conceive of them as being formed of gears and springs, all finely meshed and interdependent -- more akin to a watch mechanism than an integrated function. And though one might \textit{know} how a mechanical watch works, it is established that to \textit{understand} such a device one must actually piece it together and feel it come to life in ones hands.
 
-To phylogenetic inference, I believe the same applies; I do not believe that I could have attained my present understanding without having sought to write an inference system more-or-less from the ground up. The experience has been challenging and edifying in equal parts, and though I cannot claim great artistry or genius, I hope that the \textit{Dyr} system manifests at least a little of this profound learning.
+To phylogenetic inference, I believe the same applies; I do not believe that I could have attained my present understanding without having sought to write an inference system more-or-less from the ground up. The experience has been challenging and edifying in equal parts, and though I cannot claim great artistry or genius, I hope that the \textit{Dyr} program manifests at least a little of this profound learning.
 
 \bibliographystyle{ieeetran}
 \bibliography{dyr}

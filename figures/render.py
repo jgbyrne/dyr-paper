@@ -9,7 +9,7 @@ def main():
             print("Warning: unexpected dir entry {}".format(svg))
 
         out_name = svg[:-3] + "png"
-        com = ["convert", '../../figures/figs/{}'.format(svg), "{}".format(out_name)]
+        com = ["convert","-density", "300", '../../figures/figs/{}'.format(svg), "{}".format(out_name)]
         print("$ " + " ".join(com))
         subprocess.run(com)
 
