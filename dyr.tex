@@ -37,7 +37,7 @@ Board of Examiners in the Department of Computer Sciences, Durham University
 
 \IEEEtitleabstractindextext{%
 \begin{abstract}
-    Bayesian statistics provide a powerful framework for inferring the evolutionary history of language families from lexical data, a problem which is made computationally tractable by Markov Chain Monte Carlo (MCMC) algorithms. We present Dyr, a simple yet capable new system for Bayesian inference, and use it to replicate state-of-the-art results in the field of Indo-European linguistics. 
+    Bayesian statistics provide a powerful framework for inferring the evolutionary history of language families from lexical data, a problem which is made computationally tractable by Markov Chain Monte Carlo (MCMC) algorithms. We present Dyr, a simple yet capable new system for Bayesian inference, and use it to perform novel state-of-the-art analyses of the Indo-European language family. 
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -535,6 +535,7 @@ To further investigate the correlation between the results of our software and t
 
 Of course, it is not sufficient for our software to simply produce `good numbers'. As we have sermonised throughout this paper, it is also paramount that the results of an analysis be consistent with linguistic realities. Happily, an inspection of our inferred phylogenies reveals that even in unconstrained regions, our analyses are consistent with contemporary linguistic scholarship. For example, the closer relationship of Breton to Cornish than to Welsh is recognised in the phylogenies. Furthermore, Romance subgroups such as the Gallo-Romance (Provencal, Walloon, and French) and Rhaetian languages (Ladin, Romansh, and Friulian) are recognised and form clades in our trees. In general, the inferred MCC trees appear linguistically sound; not only topologically but chronologically; for example the inferred ages of the Latvian-Lithuanian split at between 1000 and 1300 years before present are in close agreement with the academic consenus, which suggests contact with Balto-Finnic and Slavic between the 7th and 10th centuries as an impetus for the schism.\cite{baltic2018}
 
+On balance, we consider our results to be potent -- if not conclusive -- evidence to support the Steppe hypothesis for the Indo-European \textit{Urheimat}, re-affirming the prior results of Chang et al.
 
 \subsection{Convergence}
 
@@ -639,9 +640,46 @@ The improvement gained by employing Damage-tracking is nearly a halving in runti
 
 From these data it is evident that both Damage-tracking and the usage of the BEAGLE CUDA backend are significant performance optimisations that justify the extra effort in implementing the former, and in integrating the latter. In fact, these optimisations are so signficant that were it not for their combined speedups it would have made it difficult to perform the large analyses in this paper given the computational resources available to us.
 
-\section{Evaluation and Future Steps}
+\section{Evaluation}
+
+Our work on \textit{Dyr} produced a final software solution implemented in approximately $3000$ lines of Rust program code.\footnote{Counted using the popular *nix utility \texttt{cloc}, excluding whitespace and comments.} The code is well-commented and free of technical debt, and is written in an appropriate and idiomatic fashion for the language and the problem domain.
+
+We did not aim to compete with existing solutions for feature-completeness, and it is admittedly true that our software lacks some notable features such as ascertainment bias correction and a fossilised birth-death tree prior. However, as we have demonstrated, it is fully-featured enough to perform real-world phylolinguistic analyses, from which meaningful conclusions may be drawn, and produces results that are closely comparable to existing solutions.
+
+One objective was for \textit{Dyr} to be high-performance, and as we have described, we have implemented powerful optimisations to achieve this goal. However, there is undoubtably more to do on this front. More fully-featured systems achieve better convergence and mixing by implementing considerably more MCMC moves, as well as dynamic tuning and support for multiple chains (so called `MCMCMC'). These features were out-of-scope for our research but would make positive additions to \textit{Dyr}, if they could be added without compromising the system's simplicity, elegance, and flexibility.
+
+\subsubsection{Extensibility}
+Moreover, we believe we have achieved a key goal, in producing a software package that is easily extensible. For example, let us consider the experience of a researcher aiming to implement a novel tree prior within \textit{Dyr}, as a case-study in extensibility and a demonstration of the clean abstractions engineered into the system.
+
+Firstly, the programmer should add a case for the novel prior in the sum type\footnote{In Rust, sum types are called `enums', but this name is a little confusing -- users of other languages may know them as `tagged unions'.} \texttt{cfg::TreePrior}. The type \texttt{cfg::TreePrior::Novel} will act as a container for the pre-set configuration associated with the prior; for example, prior distributions for its parameters.
+
+Next, the programmer should add a corresponding case for the novel prior in the sum type \texttt{params::TreePriorParams}. The type \texttt{params::TreePriorParams::Novel} will therefore hold a specific parameterisation of the tree prior. The design of \textit{Dyr} is such that the config wholly and neatly maps onto the parameter space in this manner.
+
+Next, the programmer must add implementations for some specific functions relating to the tree prior. They need add a case to \texttt{TreePrior::draw()}, which selects an initial parameterisation at random from the pre-configured prior distributions. And naturally, they need also add a case to \texttt{TreePrior::log\_prior\_likelihood()}, which determines the log prior likelihood of a particular parameterisation under a particular tree prior model.
+
+The programmer must create additional MCMC moves to suggest adjustments to the parameters of the novel prior. Creating a new move is as simple as defining a new heap-allocated type that implements the trait \texttt{Move} - i.e. has a function \texttt{make\_move} that accepts the current \texttt{Parameters} and mutates it, returning a \textt{MoveResult}. Then, all that remains to do within \texttt{fitzroy} is to add a small piece of logic in \texttt{Configuration::get\_moves()} so that the proposal distribution includes these moves in the case of a run being configured with the novel prior.
+
+Finally, the programmer should make some modest changes to the manifest parser so that the novel prior can be specified within the manifest format.
+
+Provided that the novel tree prior is compatible with the binary-tree model of lingistic divergence, then making these augmentations is sufficient to implement it as a first-class citizen within \textit{Dyr}. We hope it is evident from this exposition that there is little-to-no confusing or tiresome boilerplate required; by-and-large the work required is simply that of implementing the core logic, with the powerful type system and intelligent abstractions handling the rest of the plumbing.
 
 \section{Conclusion}
+
+In this paper we have taken a whistle-stop tour through the history of comparative linguistics, described the classic problem of the Indo-European \textit{Urheimat}, and outlined the history of MCMC algorithms in general and their application to phylogenetics and phylolinguistics in particular. We have described in detail the principles of every aspect of phylolinguistic inference, discussed the relative importance and merit of different model choices, in particular their reconcilability with linguistic realities.
+
+Having laid a solid theoretical foundation, we have discussed the principles, structure, and implementation of \textit{Dyr}, our greenfield phylolinguistic inference solution. We have paid particular attention to the optimisations necessary to perform large real-world inferences without making unreasonable resource demands.
+
+We have stress-tested our system by using it to tackle the established Indo-European problem-domain. We have demonstrated that our system produces similar results to established software, when performing similar analyses, while through our novel analyses we have contributed new evidence to the established body of research in this field.
+
+We have demonstrated that our software has desirable convergence and performance characteristics that make it suitable for usage in serious practical applications, and finally, we have suggested how it may be easily and cleanly extended, thus serving as a platform for future research and investigation.
+
+\subsubsection{Personal Reflections}
+
+The tangible products of any endeavour are, except in cases of great artistry or genius, crude reflections of rather more sublime constructs in the mind of the practicioner. So it goes with this project. Pleased as I am with the software I have written, I reserve the larger part of my satisfaction for the deep understanding I have gained for how complex phylogenetic inference systems operate.
+
+Although they are, in point of fact, wholly mathematical entities, such systems are in character very mechanical; one can almost conceive of them as being formed of gears and springs, all finely meshed and interdependent -- more akin to a watch mechanism than an integrated function. And though one might \textit{know} how a mechanical watch works, it is established that to \textit{understand} such a device one must actually piece it together and feel it come to life in ones hands.
+
+To phylogenetic inference, I believe the same applies; I do not believe that I could have attained my present understanding without having sought to write an inference system more-or-less from the ground up. The experience has been challenging and edifying in equal parts, and though I cannot claim great artistry or genius, I hope that the \textit{Dyr} system manifests at least a little of this profound learning.
 
 \bibliographystyle{ieeetran}
 \bibliography{dyr}

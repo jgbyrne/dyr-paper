@@ -11,9 +11,9 @@
 \citation{bouckaert2013correction}
 \citation{nicholls2008dated}
 \citation{chang2015ancestry}
-\citation{rama2018three}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Inferring Linguistic Phylogenies}{2}{}\protected@file@percent }
+\citation{rama2018three}
 \citation{ronquist2012mrbayes}
 \citation{bouckaert2014beast}
 \citation{ayres2019beagle}
@@ -21,8 +21,8 @@
 \@writefile{toc}{\contentsline {section}{\numberline {3}Methods}{3}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Lexical Trait Data}{3}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Defining the Posterior Distribution}{3}{}\protected@file@percent }
-\newlabel{eqn:posterior}{{2}{3}}
 \citation{felsenstein2004inferring}
+\newlabel{eqn:posterior}{{2}{4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Calculating Likelihood}{4}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Felsenstein's Algorithm}{4}{}\protected@file@percent }
 \newlabel{eqn:felsenstein}{{3}{4}}
@@ -32,7 +32,7 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Prior Distributions}{5}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1}Tree Constraints}{5}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}Coalescent Priors}{5}{}\protected@file@percent }
-\newlabel{eqn:coalescent}{{6}{5}}
+\newlabel{eqn:coalescent}{{6}{6}}
 \newlabel{eqn:skyline}{{7}{6}}
 \newlabel{eqn:thetaprior}{{8}{6}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3}Tree Prior Suitability}{6}{}\protected@file@percent }
@@ -40,13 +40,13 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.5}Summary}{7}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Markov Chain Monte Carlo}{7}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1}Metropolis-Hastings Algorithm}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Implementation}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Program Structure}{8}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textit  {Dyr} High-Level Program Structure\relax }}{8}{}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:program}{{1}{8}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Implementation}{8}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Program Structure}{8}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}A Step in the Chain}{8}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Making a Move}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}A Step in the Chain}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Making a Move}{9}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}Accept or Reject}{9}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.3}Marginal Likelihood}{9}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Implementing Rate Variation}{10}{}\protected@file@percent }
@@ -55,9 +55,9 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Decomposing the Rate Matrix}{11}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Spanning the Parameter Space}{11}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1}Tree LOCAL Move}{11}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2}Tree Tip Move}{11}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces An example of a tree segment as seen by the LOCAL move\relax }}{12}{}\protected@file@percent }
 \newlabel{fig:local}{{2}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2}Tree Tip Move}{12}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.3}Tree Node Swap}{12}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.4}Coalescent Interval Resize}{12}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.5}Coalescent Population Rescale and Augment}{12}{}\protected@file@percent }
@@ -67,7 +67,28 @@
 \@writefile{toc}{\contentsline {section}{\numberline {5}Results and Analysis}{12}{}\protected@file@percent }
 \citation{baltic2018}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Convergence}{13}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Performance Analysis}{13}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Convergence on constrained \textsc  {Narrow} dataset\relax }}{14}{}\protected@file@percent }
+\newlabel{fig:convergence}{{3}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Performance Analysis}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Evaluation}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.0.1}Extensibility}{14}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Analysis A: \textsc  {Broad}, constant-population coalescent prior, clade+ancestry constraints, 48M steps (MCC tree).\relax }}{15}{}\protected@file@percent }
+\newlabel{fig:analysisA}{{4}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Analysis B: \textsc  {Medium}, constant-population coalescent prior, clade+ancestry constraints, 48M steps (MCC tree).\relax }}{16}{}\protected@file@percent }
+\newlabel{fig:analysisB}{{5}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Analysis C: \textsc  {Narrow}, constant-population coalescent prior, clade+ancestry constraints, 96M steps (MCC tree).\relax }}{17}{}\protected@file@percent }
+\newlabel{fig:analysisC}{{6}{17}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{17}{}\protected@file@percent }
+\newlabel{fig:y equals x}{{7a}{18}}
+\newlabel{sub@fig:y equals x}{{a}{18}}
+\newlabel{fig:three sin x}{{7b}{18}}
+\newlabel{sub@fig:three sin x}{{b}{18}}
+\newlabel{fig:five over x}{{7c}{18}}
+\newlabel{sub@fig:five over x}{{c}{18}}
+\newlabel{fig:five over x}{{7d}{18}}
+\newlabel{sub@fig:five over x}{{d}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Convergence towards the stationary distribution with the \textsc  {Narrow} dataset\relax }}{18}{}\protected@file@percent }
+\newlabel{fig:convtrees}{{7}{18}}
 \bibstyle{ieeetran}
 \bibdata{dyr}
 \bibcite{gimbutas1974gods}{1}
@@ -84,25 +105,6 @@
 \bibcite{bouckaert2014beast}{12}
 \bibcite{ayres2019beagle}{13}
 \bibcite{baltic2018}{14}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Convergence on constrained \textsc  {Narrow} dataset\relax }}{14}{}\protected@file@percent }
-\newlabel{fig:convergence}{{3}{14}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Evaluation and Future Steps}{14}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{14}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{References}{14}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Analysis A: \textsc  {Broad}, constant-population coalescent prior, clade+ancestry constraints, 48M steps (MCC tree).\relax }}{15}{}\protected@file@percent }
-\newlabel{fig:analysisA}{{4}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Analysis B: \textsc  {Medium}, constant-population coalescent prior, clade+ancestry constraints, 48M steps (MCC tree).\relax }}{16}{}\protected@file@percent }
-\newlabel{fig:analysisB}{{5}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Analysis C: \textsc  {Narrow}, constant-population coalescent prior, clade+ancestry constraints, 96M steps (MCC tree).\relax }}{17}{}\protected@file@percent }
-\newlabel{fig:analysisC}{{6}{17}}
-\newlabel{fig:y equals x}{{7a}{18}}
-\newlabel{sub@fig:y equals x}{{a}{18}}
-\newlabel{fig:three sin x}{{7b}{18}}
-\newlabel{sub@fig:three sin x}{{b}{18}}
-\newlabel{fig:five over x}{{7c}{18}}
-\newlabel{sub@fig:five over x}{{c}{18}}
-\newlabel{fig:five over x}{{7d}{18}}
-\newlabel{sub@fig:five over x}{{d}{18}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Convergence towards the stationary distribution with the \textsc  {Narrow} dataset\relax }}{18}{}\protected@file@percent }
-\newlabel{fig:convtrees}{{7}{18}}
-\gdef \@abspage@last{18}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.1}Personal Reflections}{19}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{19}{}\protected@file@percent }
+\gdef \@abspage@last{19}
