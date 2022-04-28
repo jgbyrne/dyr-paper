@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.30)  28 APR 2022 00:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.30)  28 APR 2022 01:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -428,15 +428,125 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) [3]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9.53561> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 161.
- [4] [5] [6] [7]
-<./figures//progdiagram.png, id=44, 715.67375pt x 322.20375pt>
+ [4] [5] [6] [7] [8]
+<./figures//progdiagram.png, id=47, 715.67375pt x 322.20375pt>
 File: ./figures//progdiagram.png Graphic file (type png)
 <use ./figures//progdiagram.png>
-Package pdftex.def Info: ./figures//progdiagram.png  used on input line 355.
+Package pdftex.def Info: ./figures//progdiagram.png  used on input line 360.
 (pdftex.def)             Requested size: 256.0748pt x 115.2853pt.
- [8]
-Underfull \hbox (badness 4291) in paragraph at lines 362--363
+
+Underfull \hbox (badness 4291) in paragraph at lines 367--368
 []\T1/ppl/m/n/9.53561 The pro-gram now en-ters the main-loop of the
  []
 
-[9 <./figures
+[9 <./figures//progdiagram.png>]
+Underfull \hbox (badness 3354) in paragraph at lines 400--401
+\T1/ppl/m/n/9.53561 in log prior like-li-hood, which is the log-likelihood
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 419--420
+[]\T1/ppl/m/n/9.53561 The third ab-strac-tion layer is pro-vided by
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 419--420
+\T1/pcr/m/n/9.53561 libhmsbeagle-rs\T1/ppl/m/n/9.53561 , which con-sumes the in-ter-face
+ []
+
+
+Underfull \hbox (badness 2608) in paragraph at lines 423--424
+[]\T1/ppl/m/n/9.53561 However, the most pow-er-ful ab-strac-tion that the
+ []
+
+[10] [11]
+<./figures//local.png, id=59, 227.85126pt x 246.9225pt>
+File: ./figures//local.png Graphic file (type png)
+<use ./figures//local.png>
+Package pdftex.def Info: ./figures//local.png  used on input line 503.
+(pdftex.def)             Requested size: 113.81102pt x 123.34036pt.
+ [12 <./figures//local.png>] [13]
+<./figures//convergence.png, id=68, 409.48183pt x 322.61328pt>
+File: ./figures//convergence.png Graphic file (type png)
+<use ./figures//convergence.png>
+Package pdftex.def Info: ./figures//convergence.png  used on input line 580.
+(pdftex.def)             Requested size: 227.62204pt x 179.338pt.
+<./figures//runs24-broad-constant.png, id=69, 296.38287pt x 340.86401pt>
+File: ./figures//runs24-broad-constant.png Graphic file (type png)
+<use ./figures//runs24-broad-constant.png>
+Package pdftex.def Info: ./figures//runs24-broad-constant.png  used on input line 585.
+(pdftex.def)             Requested size: 517.935pt x 595.67836pt.
+<./figures//runs24-medium-constant.png, id=70, 296.38287pt x 311.17831pt>
+File: ./figures//runs24-medium-constant.png Graphic file (type png)
+<use ./figures//runs24-medium-constant.png>
+Package pdftex.def Info: ./figures//runs24-medium-constant.png  used on input line 590.
+(pdftex.def)             Requested size: 517.935pt x 543.801pt.
+<./figures//runs24-narrow-constant.png, id=71, 296.38287pt x 207.51543pt>
+File: ./figures//runs24-narrow-constant.png Graphic file (type png)
+<use ./figures//runs24-narrow-constant.png>
+Package pdftex.def Info: ./figures//runs24-narrow-constant.png  used on input line 595.
+(pdftex.def)             Requested size: 517.935pt x 362.64445pt.
+<./figures//runs26-conv1.png, id=72, 177.82973pt x 207.51543pt>
+File: ./figures//runs26-conv1.png Graphic file (type png)
+<use ./figures//runs26-conv1.png>
+Package pdftex.def Info: ./figures//runs26-conv1.png  used on input line 610.
+(pdftex.def)             Requested size: 245.71425pt x 286.73254pt.
+<./figures//runs26-conv2.png, id=73, 177.82973pt x 207.51543pt>
+File: ./figures//runs26-conv2.png Graphic file (type png)
+<use ./figures//runs26-conv2.png>
+Package pdftex.def Info: ./figures//runs26-conv2.png  used on input line 617.
+(pdftex.def)             Requested size: 245.71425pt x 286.73254pt.
+<./figures//runs26-conv3.png, id=74, 177.82973pt x 207.51543pt>
+File: ./figures//runs26-conv3.png Graphic file (type png)
+<use ./figures//runs26-conv3.png>
+Package pdftex.def Info: ./figures//runs26-conv3.png  used on input line 624.
+(pdftex.def)             Requested size: 245.71425pt x 286.73254pt.
+<./figures//runs26-conv4.png, id=75, 177.82973pt x 207.51543pt>
+File: ./figures//runs26-conv4.png Graphic file (type png)
+<use ./figures//runs26-conv4.png>
+Package pdftex.def Info: ./figures//runs26-conv4.png  used on input line 631.
+(pdftex.def)             Requested size: 245.71425pt x 286.73254pt.
+ [14 <./figures//convergence.png>] [15 <./figures//runs24-broad-constant.png>] [16 <./figures//runs24-medium-constant.png>]
+Underfull \hbox (badness 3148) in paragraph at lines 661--662
+[]\T1/ppl/m/n/9.53561 The im-prove-ment gained by em-ploy-ing Damage-
+ []
+
+[17 <./figures//runs24-narrow-constant.png>] [18 <./figures//runs26-conv1.png> <./figures//runs26-conv2.png> <./figures//runs26-conv3.png> <./figures//runs26-conv4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 678--679
+[]\T1/ppl/m/n/9.53561 Next, the pro-gram-mer should add a cor-re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--679
+\T1/ppl/m/n/9.53561 spond-ing case for the novel prior in the sum
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--679
+\T1/ppl/m/n/9.53561 type \T1/pcr/m/n/9.53561 params::TreePriorParams\T1/ppl/m/n/9.53561 . The type
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--679
+\T1/pcr/m/n/9.53561 params::TreePriorParams::Novel \T1/ppl/m/n/9.53561 will there-fore
+ []
+
+(./dyr.bbl [19]) [20
+
+] (./dyr.aux) ) 
+Here is how much of TeX's memory you used:
+ 6250 strings out of 480806
+ 102722 string characters out of 5905151
+ 407151 words of memory out of 6000000
+ 23514 multiletter control sequences out of 15000+600000
+ 512390 words of font info for 189 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 83i,16n,131p,1520b,511s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rep-cmsc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rep-cmrm.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on dyr.pdf (20 pages, 2609112 bytes).
+PDF statistics:
+ 173 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+
