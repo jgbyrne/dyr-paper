@@ -692,7 +692,7 @@ Then, the programmer must add implementations for some specific functions relati
 
 The programmer needs then create additional MCMC moves to suggest adjustments to the parameters of the novel prior. Creating a new move is as simple as defining a new heap-allocated type that implements the trait \texttt{Move} - i.e. has a function \texttt{make\_move} that accepts the current \texttt{Parameters} and mutates them, returning a \texttt{MoveResult}. After that, all that remains to do within \texttt{fitzroy} is to add a small piece of logic in \texttt{Configuration::get\_moves()} so that the proposal distribution includes these prior-specific moves in the case of a run being configured with the novel prior.
 
-Finally, the programmer should make some modest changes to the manifest parser so that a run may be configured with the novel prior within the manifest format.
+Finally, the programmer should make some modest changes to the manifest parser so that a run may be configured with the novel prior using the manifest format.
 
 Provided that the novel tree prior is compatible with the binary-tree model of lingistic divergence, then making these augmentations is sufficient to implement it as a first-class citizen within \textit{Dyr}. We hope it is evident from this exposition that there is little-to-no confusing or tiresome boilerplate required; by-and-large the work required is simply that of implementing the core logic, with the powerful type system and intelligent abstractions handling the rest of the plumbing.
 
