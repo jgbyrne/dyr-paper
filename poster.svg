@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="420mm"
+   viewBox="0 0 297 420"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="poster.svg"
+   inkscape:export-filename="/home/jgb/project/poster/poster.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.36157878"
+     inkscape:cx="1451.9657"
+     inkscape:cy="1091.0485"
+     inkscape:window-width="1916"
+     inkscape:window-height="1022"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="-419.97471"
+       y="1145.7349"
+       width="214.73505"
+       height="60.287764"
+       id="rect426738" />
+    <rect
+       x="10.979848"
+       y="37.481532"
+       width="526.81982"
+       height="1468.6434"
+       id="rect76925" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath33365">
+      <rect
+         style="fill:#ffffdc;fill-opacity:1;stroke:none;stroke-width:1.447;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect33367"
+         width="201.91011"
+         height="95.870476"
+         x="-239.85324"
+         y="80.132607" />
+    </clipPath>
+    <rect
+       x="10.979848"
+       y="37.481533"
+       width="562.90875"
+       height="410.52531"
+       id="rect76925-8" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1750">
+      <rect
+         style="fill:#ffffdc;stroke-width:1.447"
+         id="rect1752"
+         width="132.76231"
+         height="64.932266"
+         x="3.3891473"
+         y="283.14404" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:14.9333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.373334"
+       x="291.46771"
+       y="393.27847"
+       id="text8349"><tspan
+         sodipodi:role="line"
+         style="text-align:end;text-anchor:end;stroke-width:0.373334"
+         x="291.46771"
+         y="393.27847"
+         id="tspan8805" /></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458358,1.0583334,-4.7625107)"
+       id="text76923"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect76925);fill:#000000;fill-opacity:1;stroke:none"
+       dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+       rotate="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"><tspan
+         x="10.980469"
+         y="54.74912"
+         id="tspan6330"><tspan
+   style="-inkscape-font-specification:'CMU Serif, Normal';font-variant-caps:small-caps"
+   id="tspan6328">Languages</tspan> evolve over time.
+</tspan><tspan
+         x="10.980469"
+         y="78.082494"
+         id="tspan6332">It is common to model language
+</tspan><tspan
+         x="10.980469"
+         y="101.41587"
+         id="tspan6334">evolution with a descent tree called
+</tspan><tspan
+         x="10.980469"
+         y="124.74924"
+         id="tspan6338">a <tspan
+   style="font-weight:bold"
+   id="tspan6336">phylogeny</tspan>. When two related
+</tspan><tspan
+         x="10.980469"
+         y="148.08262"
+         id="tspan6340">languages both refer to a particular
+</tspan><tspan
+         x="10.980469"
+         y="171.41599"
+         id="tspan6342">concept with words from the same
+</tspan><tspan
+         x="10.980469"
+         y="194.74936"
+         id="tspan6346">root, we say they share a <tspan
+   style="font-weight:bold"
+   id="tspan6344">lexical
+</tspan></tspan><tspan
+         x="10.980469"
+         y="218.08274"
+         id="tspan6350"><tspan
+   style="font-weight:bold"
+   id="tspan6348">trait</tspan>. From a database of these shared
+</tspan><tspan
+         x="10.980469"
+         y="241.41611"
+         id="tspan6352">traits, we seek to quantitatively infer the most
+</tspan><tspan
+         x="10.980469"
+         y="264.74949"
+         id="tspan6354">plausible dated phylogeny of a language family.  
+</tspan><tspan
+         x="10.980469"
+         y="288.08286"
+         id="tspan6356">
+</tspan><tspan
+         x="10.980469"
+         y="311.41623"
+         id="tspan6358">Our approach is a technique called Markov
+</tspan><tspan
+         x="10.980469"
+         y="334.74961"
+         id="tspan6362">Chain Monte Carlo (<tspan
+   style="font-weight:bold"
+   id="tspan6360">MCMC</tspan>), a stochastic
+</tspan><tspan
+         x="10.980469"
+         y="358.08298"
+         id="tspan6364">process that steps through the space of possible
+</tspan><tspan
+         x="10.980469"
+         y="381.41636"
+         id="tspan6366">phylogenies and tends towards sampling from
+</tspan><tspan
+         x="10.980469"
+         y="404.74973"
+         id="tspan6368">their probability distribution according to a
+</tspan><tspan
+         x="10.980469"
+         y="428.0831"
+         id="tspan6370">Bayesian statistical model. This distribution
+</tspan><tspan
+         x="10.980469"
+         y="451.41648"
+         id="tspan6374">is called the ‘<tspan
+   style="font-weight:bold"
+   id="tspan6372">posterior</tspan>’, and it is defined as the
+</tspan><tspan
+         x="10.980469"
+         y="474.74985"
+         id="tspan6376">product of a specified prior distribution and the
+</tspan><tspan
+         x="10.980469"
+         y="498.08323"
+         id="tspan6378">likelihood of the trait data given the phylogeny.  
+</tspan><tspan
+         x="10.980469"
+         y="521.4166"
+         id="tspan6380">
+</tspan><tspan
+         x="10.980469"
+         y="544.74997"
+         id="tspan6382">We have created a new phylogenetic inference
+</tspan><tspan
+         x="10.980469"
+         y="568.08335"
+         id="tspan6386">program called <tspan
+   style="font-weight:bold"
+   id="tspan6384">Dyr</tspan>, designed as a simple yet
+</tspan><tspan
+         x="10.980469"
+         y="591.41672"
+         id="tspan6392"><tspan
+   style="font-weight:bold"
+   id="tspan6388">high-performance</tspan> and <tspan
+   style="font-weight:bold"
+   id="tspan6390">extensible</tspan> system capable
+</tspan><tspan
+         x="10.980469"
+         y="614.7501"
+         id="tspan6394">of running state-of-the-art phylolinguistic inferences
+</tspan><tspan
+         x="10.980469"
+         y="638.08347"
+         id="tspan6396">on real-world problem domains and datasets.
+</tspan><tspan
+         x="10.980469"
+         y="661.41684"
+         id="tspan6398">
+</tspan><tspan
+         x="10.980469"
+         y="684.75022"
+         id="tspan6400">Dyr is implemented in approximately 3,000 lines
+</tspan><tspan
+         x="10.980469"
+         y="708.08359"
+         id="tspan6402">of well-commented, modern, and idiomatic Rust.
+</tspan><tspan
+         x="10.980469"
+         y="731.41697"
+         id="tspan6404">It incorporates the BEAGLE 3 library via custom
+</tspan><tspan
+         x="10.980469"
+         y="754.75034"
+         id="tspan6406">bindings, enabling accelerated likelihood calculation
+</tspan><tspan
+         x="10.980469"
+         y="778.08371"
+         id="tspan6408">using CUDA. It supports a plethora of key inference
+</tspan><tspan
+         x="10.980469"
+         y="801.41709"
+         id="tspan6410">techniques including among branch and among trait
+</tspan><tspan
+         x="10.980469"
+         y="824.75046"
+         id="tspan6412">evolutionary rate variation, constant-population and
+</tspan><tspan
+         x="10.980469"
+         y="848.08384"
+         id="tspan6416">generalised skyline plot <tspan
+   style="font-weight:bold"
+   id="tspan6414">coalescent tree prior</tspan> models,
+</tspan><tspan
+         x="10.980469"
+         y="871.41721"
+         id="tspan6420">and <tspan
+   style="font-weight:bold"
+   id="tspan6418">ancestry constraints</tspan>, which enforce prior density </tspan><tspan
+         x="10.980469"
+         y="894.75058"
+         id="tspan6422">penalties on those phylogenies where a particular language
+</tspan><tspan
+         x="10.980469"
+         y="918.08396"
+         id="tspan6424">is not ancestral to a specified set of descendant languages.
+</tspan><tspan
+         x="10.980469"
+         y="941.41733"
+         id="tspan6426">
+</tspan><tspan
+         x="10.980469"
+         y="964.75071"
+         id="tspan6428">The design of Dyr is outlined in the diagram below. It is split </tspan><tspan
+         x="10.980469"
+         y="988.08408"
+         id="tspan6430">into three layers, a front-end which controls the MCMC
+</tspan><tspan
+         x="10.980469"
+         y="1011.4175"
+         id="tspan6434">mainloop, a core library <tspan
+   style="font-style:italic"
+   id="tspan6432">Fitzroy</tspan> which performs each step
+</tspan><tspan
+         x="10.980469"
+         y="1034.7508"
+         id="tspan6438">of the <tspan
+   style="font-weight:bold"
+   id="tspan6436">Metropolis-Hastings</tspan> algorithm, and our custom </tspan><tspan
+         x="10.980469"
+         y="1058.0842"
+         id="tspan6440">interface to the BEAGLE 3 likelihood engine.</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,138.25461,257.45858)"
+       id="text76923-4"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect76925-8);fill:#000000;fill-opacity:1;stroke:none"
+       dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"><tspan
+         x="10.980469"
+         y="54.74912"
+         id="tspan6442">The phylogeny above is the result of an
+</tspan><tspan
+         x="10.980469"
+         y="78.082494"
+         id="tspan6444">inference performed on lexical trait data for
+</tspan><tspan
+         x="10.980469"
+         y="101.41587"
+         id="tspan6448">the <tspan
+   style="font-weight:bold"
+   id="tspan6446">Indo-European</tspan> language family. Despite
+</tspan><tspan
+         x="10.980469"
+         y="124.74924"
+         id="tspan6450">intensive study, scholars still disagree about
+</tspan><tspan
+         x="10.980469"
+         y="148.08262"
+         id="tspan6452">where this language family originated. The leading
+</tspan><tspan
+         x="10.980469"
+         y="171.41599"
+         id="tspan6454">hypothesis is that the speakers of Proto-Indo-European were </tspan><tspan
+         x="10.980469"
+         y="194.74936"
+         id="tspan6458">inhabitants of the Pontic-Caspian <tspan
+   style="font-weight:bold"
+   id="tspan6456">Steppe</tspan> around 6000 years before </tspan><tspan
+         x="10.980469"
+         y="218.08274"
+         id="tspan6460">the present. However, a competing theory suggests an earlier origin </tspan><tspan
+         x="10.980469"
+         y="241.41611"
+         id="tspan6464">in <tspan
+   style="font-weight:bold"
+   id="tspan6462">Anatolia</tspan> around 8500 years before the present.
+</tspan><tspan
+         x="10.980469"
+         y="264.74949"
+         id="tspan6466">
+</tspan><tspan
+         x="10.980469"
+         y="288.08286"
+         id="tspan6468">Using a constant-time coalescent prior model for tree evolution,
+</tspan><tspan
+         x="10.980469"
+         y="311.41623"
+         id="tspan6470">we performed Bayesian inferences on three datasets, previously
+</tspan><tspan
+         x="10.980469"
+         y="334.74961"
+         id="tspan6472">used by Chang et al. in a similar study. Our analyses yielded a
+</tspan><tspan
+         x="10.980469"
+         y="358.08298"
+         id="tspan6476">median root age of 6008 years for the <tspan
+   style="-inkscape-font-specification:'CMU Serif, Normal';font-variant-caps:small-caps"
+   id="tspan6474">Broad</tspan> dataset (see above), </tspan><tspan
+         x="10.980469"
+         y="381.41636"
+         id="tspan6482">7692 years for the <tspan
+   style="-inkscape-font-specification:'CMU Serif, Normal';font-variant-caps:small-caps"
+   id="tspan6478">Medium</tspan> dataset, and 6307 years for the <tspan
+   style="-inkscape-font-specification:'CMU Serif, Normal';font-variant-caps:small-caps"
+   id="tspan6480">Narrow</tspan> </tspan><tspan
+         x="10.980469"
+         y="404.74973"
+         id="tspan6486">dataset. <tspan
+   style="font-weight:bold"
+   id="tspan6484">We therefore re-affirm the conclusion of Chang et </tspan></tspan><tspan
+         x="10.980469"
+         y="428.0831"
+         id="tspan6490"><tspan
+   style="font-weight:bold"
+   id="tspan6488">al. that the Steppe hypothesis is the most plausible</tspan>.
+</tspan></text>
+    <g
+       id="g471894-3"
+       transform="translate(2.7069806,-75.08955)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:5.62326px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.140582"
+         x="203.98497"
+         y="361.9938"
+         id="text468441-1"><tspan
+           sodipodi:role="line"
+           id="tspan468439-8"
+           style="stroke-width:0.140582"
+           x="203.98497"
+           y="361.9938" /></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:19.7556px;line-height:1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.388589"
+       x="5.8258448"
+       y="392.91415"
+       id="text510979"><tspan
+         sodipodi:role="line"
+         id="tspan510977"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:'TeX Gyre Termes';-inkscape-font-specification:'TeX Gyre Termes Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.388589"
+         x="5.8258448"
+         y="392.91415">Dyr, a Program for Bayesian</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:'TeX Gyre Termes';-inkscape-font-specification:'TeX Gyre Termes Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.388589"
+         x="5.8258448"
+         y="413.36584"
+         id="tspan511421">Inference of Language Phylogenies</tspan></text>
+    <image
+       preserveAspectRatio="none"
+       inkscape:svg-dpi="300"
+       width="135.4785"
+       height="61.021988"
+       xlink:href="../paper/progdiagramneat.svg"
+       id="image34997"
+       x="1.2021407"
+       y="287.05429"
+       clip-path="url(#clipPath1750)" />
+    <image
+       preserveAspectRatio="none"
+       inkscape:svg-dpi="300"
+       width="234.68753"
+       height="305.09378"
+       xlink:href="../figures/figs/runs24-broad-constant-poster.svg"
+       id="image574593"
+       x="68.823723"
+       y="0.18583903" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="276.871"
+       y="322.09338"
+       id="text132875"><tspan
+         sodipodi:role="line"
+         id="tspan132873"
+         style="stroke-width:0.264583"
+         x="276.871"
+         y="322.09338" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         id="tspan132877"
+         x="276.871"
+         y="335.32251" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="7.9725127"
+       y="348.24512"
+       id="text160215"><tspan
+         sodipodi:role="line"
+         id="tspan160213"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';stroke-width:0.264583"
+         x="7.9725127"
+         y="348.24512">Jack Byrne</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';stroke-width:0.264583"
+         x="7.9725127"
+         y="357.34845"
+         id="tspan160217">Durham University</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';stroke-width:0.264583"
+         x="7.9725127"
+         y="366.45178"
+         id="tspan170747">Department of Computer Science</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="71.983948"
+       y="176.91499"
+       id="text238042"><tspan
+         sodipodi:role="line"
+         id="tspan238040"
+         style="stroke-width:0.264583"
+         x="71.983948"
+         y="176.91499"> </tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text426736"
+       style="font-family:sans-serif;font-size:40px;line-height:1.25;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect426738)" />
+  </g>
+</svg>
