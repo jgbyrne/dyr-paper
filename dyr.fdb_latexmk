@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex dyr"] 1651123479 "dyr.aux" "dyr.bbl" "dyr" 1651124103
+["bibtex dyr"] 1651127722 "dyr.aux" "dyr.bbl" "dyr" 1651127727
   "./IEEEtran.bst" 1649954835 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "dyr.aux" 1651124103 9731 404bfa36ffc0945d8e8947350399a754 "pdflatex"
-  "dyr.bib" 1651122986 12884 f247e3832bca389316c5fab61d7f36e8 ""
+  "dyr.aux" 1651127727 9761 d093679ae20f67d773df90516eb49c31 "pdflatex"
+  "dyr.bib" 1651127716 13194 3595b85f23bf67ff1acab288092980e3 ""
   (generated)
   "dyr.bbl"
   "dyr.blg"
-["pdflatex"] 1651124098 "dyr.tex" "dyr.pdf" "dyr" 1651124103
+["pdflatex"] 1651127722 "dyr.tex" "dyr.pdf" "dyr" 1651127727
   "/home/jgb/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1648664632 1345251 acb4b6f8ac85315465aa350f046e66e6 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1642002329 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -129,9 +129,9 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1642002331 40136 b05acc85e8425979e52682d98a2bcacf ""
   "/usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1651075402 435886 4b3f444a38fe96b2ba3c9a3201ee682a ""
   "IEEEtran.cls" 1649778381 281957 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
-  "dyr.aux" 1651124103 9731 404bfa36ffc0945d8e8947350399a754 "pdflatex"
-  "dyr.bbl" 1651123479 6987 e91bd889b7c8cf95283bcf6cfbea18a7 "bibtex dyr"
-  "dyr.tex" 1651124098 103184 799891784d3275b599f0c9d80a41d78d ""
+  "dyr.aux" 1651127727 9761 d093679ae20f67d773df90516eb49c31 "pdflatex"
+  "dyr.bbl" 1651127722 7221 f0d1b94060ee847babd74ba176a37449 "bibtex dyr"
+  "dyr.tex" 1651127717 103213 33bab78c8730e7f65c2e8f46889b902b ""
   "figures//convergence.png" 1651074884 115306 4b03db8a967f88c9b02088c1256213d4 ""
   "figures//local.png" 1650803327 13700 74b86d5d05b11ee87b931fe60375cbd8 ""
   "figures//progdiagram.png" 1650586940 52939 666b003cc03487c048cf6d22f78cb0b2 ""

@@ -141,6 +141,11 @@ T.~Stadler, D.~K{\"u}hnert, S.~Bonhoeffer, and A.~J. Drummond, ``Birth--death
   c virus (hcv),'' \emph{Proceedings of the National Academy of Sciences}, vol.
   110, no.~1, pp. 228--233, 2013.
 
+\bibitem{yang1994maximum}
+Z.~Yang, ``Maximum likelihood phylogenetic estimation from dna sequences with
+  variable rates over sites: approximate methods,'' \emph{Journal of Molecular
+  evolution}, vol.~39, no.~3, pp. 306--314, 1994.
+
 \bibitem{drummond2006relaxed}
 A.~J. Drummond, S.~Y. Ho, M.~J. Phillips, and A.~Rambaut, ``Relaxed
   phylogenetics and dating with confidence,'' \emph{PLoS Biol}, vol.~4, no.~5,

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.30)  28 APR 2022 06:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.30)  28 APR 2022 15:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -561,11 +561,6 @@ Underfull \hbox (badness 2608) in paragraph at lines 430--431
  []
 
 [10]
-
-LaTeX Warning: Citation `yang1994maximum' on page 11 undefined on input line 45
-2.
-
-
 Underfull \vbox (badness 2020) has occurred while \output is active []
 
  [11]
@@ -631,41 +626,37 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18 <./figures//runs24-narrow-constant.png>] [19 <./figures//runs26-conv1.png>
  <./figures//runs26-conv2.png> <./figures//runs26-conv3.png> <./figures//runs26
--conv4.png>] (./dyr.bbl) [20] (./dyr.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+-conv4.png>] (./dyr.bbl) [20] (./dyr.aux) ) 
 Here is how much of TeX's memory you used:
  6264 strings out of 480806
  102999 string characters out of 5905151
- 407203 words of memory out of 6000000
+ 407207 words of memory out of 6000000
  23528 multiletter control sequences out of 15000+600000
  512390 words of font info for 189 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  83i,16n,131p,1520b,511s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/t
-exlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-di
-st/fonts/enc/dvips/lm/lm-rep-cmsc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/
-dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.e
-nc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rep-cmrm.enc}</usr/shar
-e/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/lm/lmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmm
-i7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/lm/lmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/lm/lmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helve
-tic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on dyr.pdf (20 pages, 2613487 bytes).
+{/usr/share/texlive/texmf-dist/fonts
+/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/l
+m-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rep-cmsc.enc}
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/
+texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texlive/texmf-dist/font
+s/enc/dvips/lm/lm-rep-cmrm.enc}</usr/share/texlive/texmf-dist/fonts/type1/publi
+c/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/lm/lmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr5.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/lm/lmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/lm/lmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/up
+lri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on dyr.pdf (20 pages, 2612520 bytes).
 PDF statistics:
  173 PDF objects out of 1000 (max. 8388607)
  110 compressed objects within 2 object streams
