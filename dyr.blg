@@ -8,49 +8,52 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: dyr.bib
+Warning--I didn't find a database entry for "yang1994maximum"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in hastings1970monte
 
 Done.
-You've used 14 entries,
+You've used 27 entries,
             4087 wiz_defined-function locations,
-            918 strings with 10417 characters,
-and the built_in function-call counts, 12663 in all, are:
-= -- 1030
-> -- 353
-< -- 124
-+ -- 196
-- -- 63
-* -- 619
-:= -- 1832
-add.period$ -- 28
-call.type$ -- 14
-change.case$ -- 11
-chr.to.int$ -- 276
-cite$ -- 14
-duplicate$ -- 861
-empty$ -- 915
-format.name$ -- 73
-if$ -- 2955
+            1005 strings with 12688 characters,
+and the built_in function-call counts, 23351 in all, are:
+= -- 1981
+> -- 571
+< -- 236
++ -- 318
+- -- 95
+* -- 1132
+:= -- 3450
+add.period$ -- 54
+call.type$ -- 27
+change.case$ -- 24
+chr.to.int$ -- 510
+cite$ -- 28
+duplicate$ -- 1627
+empty$ -- 1665
+format.name$ -- 117
+if$ -- 5448
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 151
-newline$ -- 67
-num.names$ -- 14
-pop$ -- 328
+int.to.str$ -- 27
+missing$ -- 269
+newline$ -- 106
+num.names$ -- 27
+pop$ -- 548
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 983
+skip$ -- 1838
 stack$ -- 0
-substring$ -- 671
-swap$ -- 776
-text.length$ -- 32
+substring$ -- 1250
+swap$ -- 1455
+text.length$ -- 66
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 14
-warning$ -- 0
-while$ -- 59
-width$ -- 16
-write$ -- 166
+type$ -- 27
+warning$ -- 1
+while$ -- 114
+width$ -- 29
+write$ -- 303
+(There were 2 warnings)

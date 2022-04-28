@@ -1,7 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.30)  28 APR 2022 03:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.30)  28 APR 2022 06:35
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **dyr.tex
 (./dyr.tex
@@ -17,7 +16,8 @@ Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 \@IEEEtrantmpcountB=\count180
 \@IEEEtrantmpcountC=\count181
 \@IEEEtrantmptoksA=\toks15
-LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 503.
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 5
+03.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
@@ -33,42 +33,54 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <5.01874> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <5.01874> not available
 (Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <7.02625> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <7.02625> not available
 (Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <8.03> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <8.03> not available
 (Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9.03374> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <9.03374> not available
 (Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9.53561> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <9.53561> not available
 (Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <11.04124> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <11.04124> not available
+
 (Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12.045> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <12.045> not available
 (Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.06374> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <17.06374> not available
+
 (Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.075> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <20.075> not available
 (Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.09> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <24.09> not available
 (Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
 \IEEEquantizedlength=\dimen145
 \IEEEquantizedlengthdiff=\dimen146
 \IEEEquantizedtextheightdiff=\dimen147
@@ -105,46 +117,63 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <24.09> not available
 \@IEEEtranrubishbin=\box48
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+ppl on input line 112.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ppl.fd
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 11
+2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
-)) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2020/08/01 v1.3d Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks18
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
- (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen162
 \Gin@req@width=\dimen163
-) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
- (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
- (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks19
 \XKV@tempa@toks=\toks20
 )
 \XKV@depth=\count194
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
-Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
-) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
 Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
- (/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \collectedbox=\box49
 )
@@ -153,7 +182,8 @@ Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \tc@urx=\dimen166
 \tc@ury=\dimen167
 Package trimclip Info: Using driver 'tc-pdftex.def'.
- (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen168
@@ -164,24 +194,30 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 \adjbox@pheight=\dimen173
 \adjbox@pdepth=\dimen174
 \adjbox@ptotalheight=\dimen175
- (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
 \c@checkoddpage=\count195
-) (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box50
 \sift@deathcycles=\count196
 \@vwid@loff=\dimen176
 \@vwid@roff=\dimen177
-)) (/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
-) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
- (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
- (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \captionmargin=\dimen178
 \captionmargin@=\dimen179
@@ -192,7 +228,16 @@ Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \caption@hangindent=\dimen184
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
-Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEtablestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\normalfont \sffamily \footnotesize #1}\\{\normalfont \sffamily \footnotesize #2}\par \addvspace {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptionsepspace \setbox \@tempboxa \hbox {\normalfont \sffamily \footnotesize {#1.}\nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\normalfont \sffamily \footnotesize {#1.}\nobreakspace }\parbox [t]{\hsize }{\normalfont \sffamily \footnotesize \noindent \unhbox \@tempboxa #2}\else \hbox to\hsize {\normalfont \sffamily \footnotesize \box \@tempboxa \hfil }\fi \fi  on input line 1139.
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
+blestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\norma
+lfont \sffamily \footnotesize #1}\\{\normalfont \sffamily \footnotesize #2}\par
+ \addvspace {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEf
+igurecaptionsepspace \setbox \@tempboxa \hbox {\normalfont \sffamily \footnotes
+ize {#1.}\nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbo
+x {\normalfont \sffamily \footnotesize {#1.}\nobreakspace }\parbox [t]{\hsize }
+{\normalfont \sffamily \footnotesize \noindent \unhbox \@tempboxa #2}\else \hbo
+x to\hsize {\normalfont \sffamily \footnotesize \box \@tempboxa \hfil }\fi \fi 
+ on input line 1139.
 )
 
 Package caption Warning: Unknown document class (or package),
@@ -215,21 +260,25 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@postskip=\skip51
 \thm@headsep=\skip52
 \dth@everypar=\toks26
-) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/09/23 v2.17i AMS math features
 \@mathmargin=\skip53
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
- (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks27
 \ex@=\dimen185
-)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen186
-) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count267
@@ -269,16 +318,19 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \mathdisplay@stack=\toks31
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
-) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-) (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
- (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@ALC@unique=\count279
@@ -287,7 +339,8 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \c@ALC@depth=\count282
 \ALC@tlm=\skip56
 \algorithmicindent=\skip57
-) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
 \col@sep=\dimen194
 \ar@mcellbox=\box53
@@ -296,14 +349,17 @@ Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
 \extratabsurround=\skip58
 \backup@length=\skip59
 \ar@cellbox=\box54
-) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-05-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count283
 \l__pdf_internal_box=\box55
-) (./dyr.aux)
+)
+(./dyr.aux)
 \openout1 = `dyr.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
@@ -337,98 +393,147 @@ LaTeX Font Info:    ... okay on input line 25.
 \everyMPtoPDFconversion=\toks34
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 46.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 46
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
-LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 46.
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 46
+.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+pzd on input line 46.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/upzd.fd
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/upzd.fd
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
 )
 LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 52.
+
 LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 52.
 
-Underfull \hbox (badness 1859) in paragraph at lines 60--61
-\T1/ppl/m/n/9.53561 method to anal-yse lan-guage fam-i-lies in gen-eral and
+Underfull \hbox (badness 1735) in paragraph at lines 60--61
+[]\T1/ppl/m/n/9.53561 Since the mil-len-nium, re-searchers have adopted a
  []
 
 [1{/usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 
-pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map): invalid entry for `pcrr8rn': SlantFont/ExtendFont can be used only with embedded Type1 fonts
+pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/up
+dmap/pdftex.map): invalid entry for `pcrr8rn': SlantFont/ExtendFont can be used
+ only with embedded Type1 fonts
 
 
-pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map): fontmap entry for `rpxpplb' already exists, duplicates ignored
+pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/up
+dmap/pdftex.map): fontmap entry for `rpxpplb' already exists, duplicates ignore
+d
 
 
-pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map): fontmap entry for `rpxpplbi' already exists, duplicates ignored
+pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/up
+dmap/pdftex.map): fontmap entry for `rpxpplbi' already exists, duplicates ignor
+ed
 
 
-pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map): fontmap entry for `rpxpplbo' already exists, duplicates ignored
+pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/up
+dmap/pdftex.map): fontmap entry for `rpxpplbo' already exists, duplicates ignor
+ed
 
 
-pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map): fontmap entry for `rpxpplr' already exists, duplicates ignored
+pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/up
+dmap/pdftex.map): fontmap entry for `rpxpplr' already exists, duplicates ignore
+d
 
 
-pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map): fontmap entry for `rpxpplri' already exists, duplicates ignored
+pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/up
+dmap/pdftex.map): fontmap entry for `rpxpplri' already exists, duplicates ignor
+ed
 
 
-pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map): fontmap entry for `rpxpplro' already exists, duplicates ignored
+pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/up
+dmap/pdftex.map): fontmap entry for `rpxpplro' already exists, duplicates ignor
+ed
 
 
-pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map): fontmap entry for `rtxphvb' already exists, duplicates ignored
+pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/up
+dmap/pdftex.map): fontmap entry for `rtxphvb' already exists, duplicates ignore
+d
 
 
-pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map): fontmap entry for `rtxphvbo' already exists, duplicates ignored
+pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/up
+dmap/pdftex.map): fontmap entry for `rtxphvbo' already exists, duplicates ignor
+ed
 
 
-pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map): fontmap entry for `rtxphvr' already exists, duplicates ignored
+pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/up
+dmap/pdftex.map): fontmap entry for `rtxphvr' already exists, duplicates ignore
+d
 
 
-pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map): fontmap entry for `rtxphvro' already exists, duplicates ignored
+pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/up
+dmap/pdftex.map): fontmap entry for `rtxphvro' already exists, duplicates ignor
+ed
 
 
-pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map): fontmap entry for `rtxptmb' already exists, duplicates ignored
+pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/up
+dmap/pdftex.map): fontmap entry for `rtxptmb' already exists, duplicates ignore
+d
 
 
-pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map): fontmap entry for `rtxptmbi' already exists, duplicates ignored
+pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/up
+dmap/pdftex.map): fontmap entry for `rtxptmbi' already exists, duplicates ignor
+ed
 
 
-pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map): fontmap entry for `rtxptmbo' already exists, duplicates ignored
+pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/up
+dmap/pdftex.map): fontmap entry for `rtxptmbo' already exists, duplicates ignor
+ed
 
 
-pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map): fontmap entry for `rtxptmr' already exists, duplicates ignored
+pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/up
+dmap/pdftex.map): fontmap entry for `rtxptmr' already exists, duplicates ignore
+d
 
 
-pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map): fontmap entry for `rtxptmri' already exists, duplicates ignored
+pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/up
+dmap/pdftex.map): fontmap entry for `rtxptmri' already exists, duplicates ignor
+ed
 
 
-pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map): fontmap entry for `rtxptmro' already exists, duplicates ignored
+pdfTeX warning: pdflatex (file /usr/share/texlive/texmf-var/fonts/map/pdftex/up
+dmap/pdftex.map): fontmap entry for `rtxptmro' already exists, duplicates ignor
+ed
 }
 
 
 ] [2]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 120.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 12
+0.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) [3]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9.53561> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 161.
- [4] [5] [6] [7] [8]
+ [4]
+[5] [6] [7] [8]
 <./figures//progdiagram.png, id=47, 715.67375pt x 322.20375pt>
 File: ./figures//progdiagram.png Graphic file (type png)
 <use ./figures//progdiagram.png>
@@ -446,7 +551,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 426--427
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 426--427
-\T1/pcr/m/n/9.53561 libhmsbeagle-rs\T1/ppl/m/n/9.53561 , which con-sumes the in-ter-face
+\T1/pcr/m/n/9.53561 libhmsbeagle-rs\T1/ppl/m/n/9.53561 , which con-sumes the in
+-ter-face
  []
 
 
@@ -455,6 +561,11 @@ Underfull \hbox (badness 2608) in paragraph at lines 430--431
  []
 
 [10]
+
+LaTeX Warning: Citation `yang1994maximum' on page 11 undefined on input line 45
+2.
+
+
 Underfull \vbox (badness 2020) has occurred while \output is active []
 
  [11]
@@ -463,7 +574,8 @@ File: ./figures//local.png Graphic file (type png)
 <use ./figures//local.png>
 Package pdftex.def Info: ./figures//local.png  used on input line 514.
 (pdftex.def)             Requested size: 113.81102pt x 123.34036pt.
- [12] [13 <./figures//local.png>]
+
+[12] [13 <./figures//local.png>]
 <./figures//convergence.png, id=68, 409.48183pt x 322.61328pt>
 File: ./figures//convergence.png Graphic file (type png)
 <use ./figures//convergence.png>
@@ -473,57 +585,87 @@ Package pdftex.def Info: ./figures//convergence.png  used on input line 577.
 <./figures//runs24-broad-constant.png, id=73, 296.38287pt x 340.86401pt>
 File: ./figures//runs24-broad-constant.png Graphic file (type png)
 <use ./figures//runs24-broad-constant.png>
-Package pdftex.def Info: ./figures//runs24-broad-constant.png  used on input line 596.
+Package pdftex.def Info: ./figures//runs24-broad-constant.png  used on input li
+ne 596.
 (pdftex.def)             Requested size: 517.935pt x 595.67836pt.
 <./figures//runs24-medium-constant.png, id=74, 296.38287pt x 311.17831pt>
 File: ./figures//runs24-medium-constant.png Graphic file (type png)
 <use ./figures//runs24-medium-constant.png>
-Package pdftex.def Info: ./figures//runs24-medium-constant.png  used on input line 601.
+Package pdftex.def Info: ./figures//runs24-medium-constant.png  used on input l
+ine 601.
 (pdftex.def)             Requested size: 517.935pt x 543.801pt.
 <./figures//runs24-narrow-constant.png, id=75, 296.38287pt x 207.51543pt>
 File: ./figures//runs24-narrow-constant.png Graphic file (type png)
 <use ./figures//runs24-narrow-constant.png>
-Package pdftex.def Info: ./figures//runs24-narrow-constant.png  used on input line 606.
+Package pdftex.def Info: ./figures//runs24-narrow-constant.png  used on input l
+ine 606.
 (pdftex.def)             Requested size: 517.935pt x 362.64445pt.
 <./figures//runs26-conv1.png, id=76, 177.82973pt x 207.51543pt>
 File: ./figures//runs26-conv1.png Graphic file (type png)
 <use ./figures//runs26-conv1.png>
-Package pdftex.def Info: ./figures//runs26-conv1.png  used on input line 621.
+Package pdftex.def Info: ./figures//runs26-conv1.png  used on input line 615.
 (pdftex.def)             Requested size: 245.71425pt x 286.73254pt.
 <./figures//runs26-conv2.png, id=77, 177.82973pt x 207.51543pt>
 File: ./figures//runs26-conv2.png Graphic file (type png)
 <use ./figures//runs26-conv2.png>
-Package pdftex.def Info: ./figures//runs26-conv2.png  used on input line 628.
+Package pdftex.def Info: ./figures//runs26-conv2.png  used on input line 622.
 (pdftex.def)             Requested size: 245.71425pt x 286.73254pt.
 <./figures//runs26-conv3.png, id=78, 177.82973pt x 207.51543pt>
 File: ./figures//runs26-conv3.png Graphic file (type png)
 <use ./figures//runs26-conv3.png>
-Package pdftex.def Info: ./figures//runs26-conv3.png  used on input line 635.
+Package pdftex.def Info: ./figures//runs26-conv3.png  used on input line 629.
 (pdftex.def)             Requested size: 245.71425pt x 286.73254pt.
 <./figures//runs26-conv4.png, id=79, 177.82973pt x 207.51543pt>
 File: ./figures//runs26-conv4.png Graphic file (type png)
 <use ./figures//runs26-conv4.png>
-Package pdftex.def Info: ./figures//runs26-conv4.png  used on input line 642.
+Package pdftex.def Info: ./figures//runs26-conv4.png  used on input line 636.
 (pdftex.def)             Requested size: 245.71425pt x 286.73254pt.
 
-Underfull \hbox (badness 1354) in paragraph at lines 689--690
+Underfull \hbox (badness 1354) in paragraph at lines 683--684
 \T1/ppl/m/n/9.53561 case for the novel tree prior in a sec-ond sum type
  []
 
-[15] [16 <./figures//runs24-broad-constant.png>] [17 <./figures//runs24-medium-constant.png>]
+[15] [16 <./figures//runs24-broad-constant.png>] [17 <./figures//runs24-medium-
+constant.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18 <./figures//runs24-narrow-constant.png>] [19 <./figures//runs26-conv1.png> <./figures//runs26-conv2.png> <./figures//runs26-conv3.png> <./figures//runs26-conv4.png>] (./dyr.bbl) [20] (./dyr.aux) ) 
+ [18 <./figures//runs24-narrow-constant.png>] [19 <./figures//runs26-conv1.png>
+ <./figures//runs26-conv2.png> <./figures//runs26-conv3.png> <./figures//runs26
+-conv4.png>] (./dyr.bbl) [20] (./dyr.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6250 strings out of 480806
- 102722 string characters out of 5905151
- 407151 words of memory out of 6000000
- 23514 multiletter control sequences out of 15000+600000
+ 6264 strings out of 480806
+ 102999 string characters out of 5905151
+ 407203 words of memory out of 6000000
+ 23528 multiletter control sequences out of 15000+600000
  512390 words of font info for 189 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  83i,16n,131p,1520b,511s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rep-cmsc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rep-cmrm.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on dyr.pdf (20 pages, 2610365 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/t
+exlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-di
+st/fonts/enc/dvips/lm/lm-rep-cmsc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/
+dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.e
+nc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rep-cmrm.enc}</usr/shar
+e/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/lm/lmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmm
+i7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/lm/lmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/lm/lmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helve
+tic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on dyr.pdf (20 pages, 2613487 bytes).
 PDF statistics:
  173 PDF objects out of 1000 (max. 8388607)
  110 compressed objects within 2 object streams

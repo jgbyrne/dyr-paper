@@ -1,10 +1,19 @@
 \relax 
+\citation{atkinson2005curious}
 \citation{gimbutas1974gods}
 \citation{renfrew2001anatolian}
+\citation{greenhill2020bayesian}
 \providecommand \oddpage@label [2]{}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{}\protected@file@percent }
 \newlabel{sec:introduction}{{1}{1}}
+\citation{bouckaert2014beast}
+\citation{ronquist2012mrbayes}
+\citation{chang2015ancestry}
 \citation{felsenstein2004inferring}
+\citation{hastings1970monte}
+\citation{ronquist2012mrbayes}
+\citation{gilks1996strategies}
+\citation{heled2013looking}
 \citation{swadesh1955towards}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{}\protected@file@percent }
 \newlabel{sec:related}{{2}{2}}
@@ -15,9 +24,9 @@
 \citation{nicholls2008dated}
 \citation{chang2015ancestry}
 \citation{rama2018three}
-\citation{ronquist2012mrbayes}
-\citation{bouckaert2014beast}
 \citation{ayres2019beagle}
+\citation{matsakis2014rust}
+\citation{chib1995understanding}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Extant Software}{3}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3}Methods}{3}{}\protected@file@percent }
 \newlabel{sec:methods}{{3}{3}}
@@ -27,24 +36,33 @@
 \newlabel{eqn:posterior}{{2}{4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Calculating Likelihood}{4}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Felsenstein's Algorithm}{4}{}\protected@file@percent }
+\citation{pagel2018deep}
+\citation{bergsland1962validity}
 \newlabel{eqn:felsenstein}{{3}{5}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}Substitution Model and Trait Evolution}{5}{}\protected@file@percent }
 \newlabel{eqn:ratematrix}{{4}{5}}
 \newlabel{eqn:rate}{{5}{5}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Prior Distributions}{5}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1}Tree Constraints}{5}{}\protected@file@percent }
+\citation{drummond2005bayesian}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}Coalescent Priors}{6}{}\protected@file@percent }
 \newlabel{eqn:coalescent}{{6}{6}}
 \newlabel{eqn:skyline}{{7}{6}}
+\citation{rama2018three}
+\citation{stadler2013birth}
 \newlabel{eqn:thetaprior}{{8}{7}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3}Tree Prior Suitability}{7}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.4}Substitution Model Priors}{7}{}\protected@file@percent }
+\citation{hastings1970monte}
+\citation{chib1995understanding}
+\citation{ayres2019beagle}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.5}Summary}{8}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Markov Chain Monte Carlo}{8}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1}Metropolis-Hastings Algorithm}{8}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {4}Implementation}{8}{}\protected@file@percent }
 \newlabel{sec:implementation}{{4}{8}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}High-Level Decisions}{8}{}\protected@file@percent }
+\citation{heled2013looking}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textit  {Dyr} High-Level Program Structure\relax }}{9}{}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:program}{{1}{9}}
@@ -53,9 +71,12 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Making a Move}{9}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Accept or Reject}{10}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3}Log Likelihood}{10}{}\protected@file@percent }
+\citation{yang1994maximum}
+\citation{drummond2006relaxed}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Implementing Rate Variation}{11}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}Among Site Rate Variation}{11}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}Among Branch Rate Variation}{11}{}\protected@file@percent }
+\citation{larget1999markov}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Decomposing the Rate Matrix}{12}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Spanning the Parameter Space}{12}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.6.1}Tree LOCAL Move}{12}{}\protected@file@percent }
@@ -74,6 +95,7 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Convergence}{14}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Convergence on constrained \textsc  {Narrow} dataset\relax }}{14}{}\protected@file@percent }
 \newlabel{fig:convergence}{{3}{14}}
+\citation{ronquist2012mrbayes}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Performance Analysis}{15}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {6}Evaluation}{15}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.0.1}Extensibility}{15}{}\protected@file@percent }
@@ -97,20 +119,33 @@
 \newlabel{fig:convtrees}{{7}{19}}
 \bibstyle{ieeetran}
 \bibdata{dyr}
-\bibcite{gimbutas1974gods}{1}
-\bibcite{renfrew2001anatolian}{2}
-\bibcite{felsenstein2004inferring}{3}
-\bibcite{swadesh1955towards}{4}
-\bibcite{gray2003language}{5}
-\bibcite{bouckaert2012mapping}{6}
-\bibcite{bouckaert2013correction}{7}
-\bibcite{nicholls2008dated}{8}
-\bibcite{chang2015ancestry}{9}
-\bibcite{rama2018three}{10}
-\bibcite{ronquist2012mrbayes}{11}
-\bibcite{bouckaert2014beast}{12}
-\bibcite{ayres2019beagle}{13}
-\bibcite{baltic2018}{14}
+\bibcite{atkinson2005curious}{1}
+\bibcite{gimbutas1974gods}{2}
+\bibcite{renfrew2001anatolian}{3}
+\bibcite{greenhill2020bayesian}{4}
+\bibcite{bouckaert2014beast}{5}
+\bibcite{ronquist2012mrbayes}{6}
+\bibcite{chang2015ancestry}{7}
+\bibcite{felsenstein2004inferring}{8}
+\bibcite{hastings1970monte}{9}
+\bibcite{gilks1996strategies}{10}
+\bibcite{heled2013looking}{11}
+\bibcite{swadesh1955towards}{12}
+\bibcite{gray2003language}{13}
+\bibcite{bouckaert2012mapping}{14}
+\bibcite{bouckaert2013correction}{15}
+\bibcite{nicholls2008dated}{16}
+\bibcite{rama2018three}{17}
+\bibcite{ayres2019beagle}{18}
+\bibcite{matsakis2014rust}{19}
+\bibcite{chib1995understanding}{20}
+\bibcite{pagel2018deep}{21}
+\bibcite{bergsland1962validity}{22}
+\bibcite{drummond2005bayesian}{23}
+\bibcite{stadler2013birth}{24}
+\bibcite{drummond2006relaxed}{25}
+\bibcite{larget1999markov}{26}
+\bibcite{baltic2018}{27}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.1}Personal Reflections}{20}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{References}{20}{}\protected@file@percent }
 \gdef \@abspage@last{20}

@@ -21,6 +21,11 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{atkinson2005curious}
+Q.~D. Atkinson and R.~D. Gray, ``Curious parallels and curious
+  connections—phylogenetic thinking in biology and historical linguistics,''
+  \emph{Systematic biology}, vol.~54, no.~4, pp. 513--526, 2005.
+
 \bibitem{gimbutas1974gods}
 M.~Gimbutas \emph{et~al.}, \emph{The Gods and Goddesses of Old Europe: 7000 to
   3500 BC myths, legends and cult images}.\hskip 1em plus 0.5em minus
@@ -31,9 +36,44 @@ C.~Renfrew and R.~Drews, ``The anatolian origins of proto-indo-european and the
   autochthony of the hittites,'' \emph{Journal of Indo-European Studies}, pp.
   36--63, 2001.
 
+\bibitem{greenhill2020bayesian}
+S.~J. Greenhill, P.~Heggarty, and R.~D. Gray, ``Bayesian phylolinguistics,''
+  \emph{The Handbook of Historical Linguistics}, vol.~2, pp. 226--253, 2020.
+
+\bibitem{bouckaert2014beast}
+R.~Bouckaert, J.~Heled, D.~K{\"u}hnert, T.~Vaughan, C.-H. Wu, D.~Xie, M.~A.
+  Suchard, A.~Rambaut, and A.~J. Drummond, ``Beast 2: a software platform for
+  bayesian evolutionary analysis,'' \emph{PLoS Comput Biol}, vol.~10, no.~4, p.
+  e1003537, 2014.
+
+\bibitem{ronquist2012mrbayes}
+F.~Ronquist, M.~Teslenko, P.~Van Der~Mark, D.~L. Ayres, A.~Darling,
+  S.~H{\"o}hna, B.~Larget, L.~Liu, M.~A. Suchard, and J.~P. Huelsenbeck,
+  ``Mrbayes 3.2: efficient bayesian phylogenetic inference and model choice
+  across a large model space,'' \emph{Systematic biology}, vol.~61, no.~3, pp.
+  539--542, 2012.
+
+\bibitem{chang2015ancestry}
+W.~Chang, D.~Hall, C.~Cathcart, and A.~Garrett, ``Ancestry-constrained
+  phylogenetic analysis supports the indo-european steppe hypothesis,''
+  \emph{Language}, pp. 194--244, 2015.
+
 \bibitem{felsenstein2004inferring}
 J.~Felenstein, \emph{Inferring phylogenies}.\hskip 1em plus 0.5em minus
   0.4em\relax Sinauer associates Sunderland, MA, 2004, vol.~2.
+
+\bibitem{hastings1970monte}
+W.~K. Hastings, ``Monte carlo sampling methods using markov chains and their
+  applications,'' 1970.
+
+\bibitem{gilks1996strategies}
+W.~R. Gilks and G.~O. Roberts, ``Strategies for improving mcmc,'' \emph{Markov
+  chain Monte Carlo in practice}, vol.~6, pp. 89--114, 1996.
+
+\bibitem{heled2013looking}
+J.~Heled and R.~R. Bouckaert, ``Looking for trees in the forest: summary tree
+  from posterior samples,'' \emph{BMC evolutionary biology}, vol.~13, no.~1,
+  pp. 1--11, 2013.
 
 \bibitem{swadesh1955towards}
 M.~Swadesh, ``Towards greater accuracy in lexicostatistic dating,''
@@ -61,28 +101,10 @@ G.~K. Nicholls and R.~D. Gray, ``Dated ancestral trees from binary trait data
   the Royal Statistical Society: Series B (Statistical Methodology)}, vol.~70,
   no.~3, pp. 545--566, 2008.
 
-\bibitem{chang2015ancestry}
-W.~Chang, D.~Hall, C.~Cathcart, and A.~Garrett, ``Ancestry-constrained
-  phylogenetic analysis supports the indo-european steppe hypothesis,''
-  \emph{Language}, pp. 194--244, 2015.
-
 \bibitem{rama2018three}
 T.~Rama, ``Three tree priors and five datasets: A study of indo-european
   phylogenetics,'' \emph{Language Dynamics and Change}, vol.~8, no.~2, pp.
   182--218, 2018.
-
-\bibitem{ronquist2012mrbayes}
-F.~Ronquist, M.~Teslenko, P.~Van Der~Mark, D.~L. Ayres, A.~Darling,
-  S.~H{\"o}hna, B.~Larget, L.~Liu, M.~A. Suchard, and J.~P. Huelsenbeck,
-  ``Mrbayes 3.2: efficient bayesian phylogenetic inference and model choice
-  across a large model space,'' \emph{Systematic biology}, vol.~61, no.~3, pp.
-  539--542, 2012.
-
-\bibitem{bouckaert2014beast}
-R.~Bouckaert, J.~Heled, D.~K{\"u}hnert, T.~Vaughan, C.-H. Wu, D.~Xie, M.~A.
-  Suchard, A.~Rambaut, and A.~J. Drummond, ``Beast 2: a software platform for
-  bayesian evolutionary analysis,'' \emph{PLoS Comput Biol}, vol.~10, no.~4, p.
-  e1003537, 2014.
 
 \bibitem{ayres2019beagle}
 D.~L. Ayres, M.~P. Cummings, G.~Baele, A.~E. Darling, P.~O. Lewis, D.~L.
@@ -90,6 +112,44 @@ D.~L. Ayres, M.~P. Cummings, G.~Baele, A.~E. Darling, P.~O. Lewis, D.~L.
   ``Beagle 3: improved performance, scaling, and usability for a
   high-performance computing library for statistical phylogenetics,''
   \emph{Systematic biology}, vol.~68, no.~6, pp. 1052--1061, 2019.
+
+\bibitem{matsakis2014rust}
+N.~D. Matsakis and F.~S. Klock, ``The rust language,'' \emph{ACM SIGAda Ada
+  Letters}, vol.~34, no.~3, pp. 103--104, 2014.
+
+\bibitem{chib1995understanding}
+S.~Chib and E.~Greenberg, ``Understanding the metropolis-hastings algorithm,''
+  \emph{The american statistician}, vol.~49, no.~4, pp. 327--335, 1995.
+
+\bibitem{pagel2018deep}
+M.~Pagel and A.~Meade, ``The deep history of the number words,''
+  \emph{Philosophical Transactions of the Royal Society B: Biological
+  Sciences}, vol. 373, no. 1740, p. 20160517, 2018.
+
+\bibitem{bergsland1962validity}
+K.~Bergsland and H.~Vogt, ``On the validity of glottochronology,''
+  \emph{Current anthropology}, vol.~3, no.~2, pp. 115--153, 1962.
+
+\bibitem{drummond2005bayesian}
+A.~J. Drummond, A.~Rambaut, B.~Shapiro, and O.~G. Pybus, ``Bayesian coalescent
+  inference of past population dynamics from molecular sequences,''
+  \emph{Molecular biology and evolution}, vol.~22, no.~5, pp. 1185--1192, 2005.
+
+\bibitem{stadler2013birth}
+T.~Stadler, D.~K{\"u}hnert, S.~Bonhoeffer, and A.~J. Drummond, ``Birth--death
+  skyline plot reveals temporal changes of epidemic spread in hiv and hepatitis
+  c virus (hcv),'' \emph{Proceedings of the National Academy of Sciences}, vol.
+  110, no.~1, pp. 228--233, 2013.
+
+\bibitem{drummond2006relaxed}
+A.~J. Drummond, S.~Y. Ho, M.~J. Phillips, and A.~Rambaut, ``Relaxed
+  phylogenetics and dating with confidence,'' \emph{PLoS Biol}, vol.~4, no.~5,
+  p. e88, 2006.
+
+\bibitem{larget1999markov}
+B.~Larget and D.~L. Simon, ``Markov chain monte carlo algorithms for the
+  bayesian analysis of phylogenetic trees,'' \emph{Molecular biology and
+  evolution}, vol.~16, no.~6, pp. 750--759, 1999.
 
 \bibitem{baltic2018}
 \BIBentryALTinterwordspacing
